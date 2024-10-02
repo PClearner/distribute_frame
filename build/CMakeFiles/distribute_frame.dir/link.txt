@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/distribute_frame.dir/main.cpp.o -o distribute_frame 

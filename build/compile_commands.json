@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/star/workspace/distribution_system/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/distribute_frame.dir/main.cpp.o -c /home/star/workspace/distribution_system/main.cpp",
+  "file": "/home/star/workspace/distribution_system/main.cpp"
+}
+]

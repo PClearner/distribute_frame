@@ -1,0 +1,3 @@
+/home/star/workspace/distribution_system/build/CMakeFiles/distribute_frame.dir
+/home/star/workspace/distribution_system/build/CMakeFiles/edit_cache.dir
+/home/star/workspace/distribution_system/build/CMakeFiles/rebuild_cache.dir
