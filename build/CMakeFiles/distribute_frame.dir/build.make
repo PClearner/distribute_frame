@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/star/workspace/distribution_system
+CMAKE_SOURCE_DIR = /home/star/workspace/distribution_frame
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/star/workspace/distribution_system/build
+CMAKE_BINARY_DIR = /home/star/workspace/distribution_frame/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/distribute_frame.dir/depend.make
@@ -69,35 +69,37 @@ include CMakeFiles/distribute_frame.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/distribute_frame.dir/flags.make
 
-CMakeFiles/distribute_frame.dir/main.cpp.o: CMakeFiles/distribute_frame.dir/flags.make
-CMakeFiles/distribute_frame.dir/main.cpp.o: ../main.cpp
-CMakeFiles/distribute_frame.dir/main.cpp.o: CMakeFiles/distribute_frame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/star/workspace/distribution_system/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/distribute_frame.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/distribute_frame.dir/main.cpp.o -MF CMakeFiles/distribute_frame.dir/main.cpp.o.d -o CMakeFiles/distribute_frame.dir/main.cpp.o -c /home/star/workspace/distribution_system/main.cpp
+CMakeFiles/distribute_frame.dir/app/test1.cpp.o: CMakeFiles/distribute_frame.dir/flags.make
+CMakeFiles/distribute_frame.dir/app/test1.cpp.o: ../app/test1.cpp
+CMakeFiles/distribute_frame.dir/app/test1.cpp.o: CMakeFiles/distribute_frame.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/distribute_frame.dir/app/test1.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/distribute_frame.dir/app/test1.cpp.o -MF CMakeFiles/distribute_frame.dir/app/test1.cpp.o.d -o CMakeFiles/distribute_frame.dir/app/test1.cpp.o -c /home/star/workspace/distribution_frame/app/test1.cpp
 
-CMakeFiles/distribute_frame.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/distribute_frame.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/star/workspace/distribution_system/main.cpp > CMakeFiles/distribute_frame.dir/main.cpp.i
+CMakeFiles/distribute_frame.dir/app/test1.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/distribute_frame.dir/app/test1.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/star/workspace/distribution_frame/app/test1.cpp > CMakeFiles/distribute_frame.dir/app/test1.cpp.i
 
-CMakeFiles/distribute_frame.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/distribute_frame.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/star/workspace/distribution_system/main.cpp -o CMakeFiles/distribute_frame.dir/main.cpp.s
+CMakeFiles/distribute_frame.dir/app/test1.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/distribute_frame.dir/app/test1.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/star/workspace/distribution_frame/app/test1.cpp -o CMakeFiles/distribute_frame.dir/app/test1.cpp.s
 
 # Object files for target distribute_frame
 distribute_frame_OBJECTS = \
-"CMakeFiles/distribute_frame.dir/main.cpp.o"
+"CMakeFiles/distribute_frame.dir/app/test1.cpp.o"
 
 # External object files for target distribute_frame
 distribute_frame_EXTERNAL_OBJECTS =
 
-distribute_frame: CMakeFiles/distribute_frame.dir/main.cpp.o
-distribute_frame: CMakeFiles/distribute_frame.dir/build.make
-distribute_frame: CMakeFiles/distribute_frame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/star/workspace/distribution_system/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable distribute_frame"
+../bin/distribute_frame: CMakeFiles/distribute_frame.dir/app/test1.cpp.o
+../bin/distribute_frame: CMakeFiles/distribute_frame.dir/build.make
+../bin/distribute_frame: ../lib/libmuduo_net.a
+../bin/distribute_frame: ../lib/libmuduo_base.a
+../bin/distribute_frame: CMakeFiles/distribute_frame.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/distribute_frame"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/distribute_frame.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/distribute_frame.dir/build: distribute_frame
+CMakeFiles/distribute_frame.dir/build: ../bin/distribute_frame
 .PHONY : CMakeFiles/distribute_frame.dir/build
 
 CMakeFiles/distribute_frame.dir/clean:
@@ -105,6 +107,6 @@ CMakeFiles/distribute_frame.dir/clean:
 .PHONY : CMakeFiles/distribute_frame.dir/clean
 
 CMakeFiles/distribute_frame.dir/depend:
-	cd /home/star/workspace/distribution_system/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/star/workspace/distribution_system /home/star/workspace/distribution_system /home/star/workspace/distribution_system/build /home/star/workspace/distribution_system/build /home/star/workspace/distribution_system/build/CMakeFiles/distribute_frame.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/star/workspace/distribution_frame/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/star/workspace/distribution_frame /home/star/workspace/distribution_frame /home/star/workspace/distribution_frame/build /home/star/workspace/distribution_frame/build /home/star/workspace/distribution_frame/build/CMakeFiles/distribute_frame.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/distribute_frame.dir/depend
 

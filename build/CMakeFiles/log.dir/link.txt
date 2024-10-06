@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/log.dir/app/tools/logmain.cpp.o CMakeFiles/log.dir/src/tools/lock.cpp.o CMakeFiles/log.dir/src/tools/logger.cpp.o -o ../bin/log 

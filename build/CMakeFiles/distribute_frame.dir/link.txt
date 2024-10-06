@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/distribute_frame.dir/main.cpp.o -o distribute_frame 
+/usr/bin/g++ -g CMakeFiles/distribute_frame.dir/app/test1.cpp.o -o ../bin/distribute_frame  ../lib/libmuduo_net.a ../lib/libmuduo_base.a -lpthread 

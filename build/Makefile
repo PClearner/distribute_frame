@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/star/workspace/distribution_system
+CMAKE_SOURCE_DIR = /home/star/workspace/distribution_frame
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/star/workspace/distribution_system/build
+CMAKE_BINARY_DIR = /home/star/workspace/distribution_frame/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_system/build/CMakeFiles /home/star/workspace/distribution_system/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles /home/star/workspace/distribution_frame/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_system/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,41 +117,89 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named distribute_frame
+# Target rules for targets named log
 
 # Build rule for target.
-distribute_frame: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 distribute_frame
-.PHONY : distribute_frame
+log: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 log
+.PHONY : log
 
 # fast build rule for target.
-distribute_frame/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/distribute_frame.dir/build.make CMakeFiles/distribute_frame.dir/build
-.PHONY : distribute_frame/fast
+log/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/build
+.PHONY : log/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+app/tools/logmain.o: app/tools/logmain.cpp.o
+.PHONY : app/tools/logmain.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/distribute_frame.dir/build.make CMakeFiles/distribute_frame.dir/main.cpp.o
-.PHONY : main.cpp.o
+app/tools/logmain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/app/tools/logmain.cpp.o
+.PHONY : app/tools/logmain.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+app/tools/logmain.i: app/tools/logmain.cpp.i
+.PHONY : app/tools/logmain.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/distribute_frame.dir/build.make CMakeFiles/distribute_frame.dir/main.cpp.i
-.PHONY : main.cpp.i
+app/tools/logmain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/app/tools/logmain.cpp.i
+.PHONY : app/tools/logmain.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+app/tools/logmain.s: app/tools/logmain.cpp.s
+.PHONY : app/tools/logmain.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/distribute_frame.dir/build.make CMakeFiles/distribute_frame.dir/main.cpp.s
-.PHONY : main.cpp.s
+app/tools/logmain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/app/tools/logmain.cpp.s
+.PHONY : app/tools/logmain.cpp.s
+
+src/tools/lock.o: src/tools/lock.cpp.o
+.PHONY : src/tools/lock.o
+
+# target to build an object file
+src/tools/lock.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/tools/lock.cpp.o
+.PHONY : src/tools/lock.cpp.o
+
+src/tools/lock.i: src/tools/lock.cpp.i
+.PHONY : src/tools/lock.i
+
+# target to preprocess a source file
+src/tools/lock.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/tools/lock.cpp.i
+.PHONY : src/tools/lock.cpp.i
+
+src/tools/lock.s: src/tools/lock.cpp.s
+.PHONY : src/tools/lock.s
+
+# target to generate assembly for a file
+src/tools/lock.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/tools/lock.cpp.s
+.PHONY : src/tools/lock.cpp.s
+
+src/tools/logger.o: src/tools/logger.cpp.o
+.PHONY : src/tools/logger.o
+
+# target to build an object file
+src/tools/logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/tools/logger.cpp.o
+.PHONY : src/tools/logger.cpp.o
+
+src/tools/logger.i: src/tools/logger.cpp.i
+.PHONY : src/tools/logger.i
+
+# target to preprocess a source file
+src/tools/logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/tools/logger.cpp.i
+.PHONY : src/tools/logger.cpp.i
+
+src/tools/logger.s: src/tools/logger.cpp.s
+.PHONY : src/tools/logger.s
+
+# target to generate assembly for a file
+src/tools/logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/tools/logger.cpp.s
+.PHONY : src/tools/logger.cpp.s
 
 # Help Target
 help:
@@ -161,10 +209,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... distribute_frame"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... log"
+	@echo "... app/tools/logmain.o"
+	@echo "... app/tools/logmain.i"
+	@echo "... app/tools/logmain.s"
+	@echo "... src/tools/lock.o"
+	@echo "... src/tools/lock.i"
+	@echo "... src/tools/lock.s"
+	@echo "... src/tools/logger.o"
+	@echo "... src/tools/logger.i"
+	@echo "... src/tools/logger.s"
 .PHONY : help
 
 

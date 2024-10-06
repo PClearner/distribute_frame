@@ -1,7 +1,17 @@
 [
 {
-  "directory": "/home/star/workspace/distribution_system/build",
-  "command": "/usr/bin/c++   -g -o CMakeFiles/distribute_frame.dir/main.cpp.o -c /home/star/workspace/distribution_system/main.cpp",
-  "file": "/home/star/workspace/distribution_system/main.cpp"
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/g++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/log.dir/app/tools/logmain.cpp.o -c /home/star/workspace/distribution_frame/app/tools/logmain.cpp",
+  "file": "/home/star/workspace/distribution_frame/app/tools/logmain.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/g++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/log.dir/src/tools/lock.cpp.o -c /home/star/workspace/distribution_frame/src/tools/lock.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/tools/lock.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/g++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/log.dir/src/tools/logger.cpp.o -c /home/star/workspace/distribution_frame/src/tools/logger.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/tools/logger.cpp"
 }
 ]

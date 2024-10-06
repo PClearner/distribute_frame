@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/distribute_frame.dir/main.cpp.o"
-  "CMakeFiles/distribute_frame.dir/main.cpp.o.d"
-  "distribute_frame"
-  "distribute_frame.pdb"
+  "../bin/distribute_frame"
+  "../bin/distribute_frame.pdb"
+  "CMakeFiles/distribute_frame.dir/app/test1.cpp.o"
+  "CMakeFiles/distribute_frame.dir/app/test1.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

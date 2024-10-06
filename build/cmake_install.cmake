@@ -1,4 +1,4 @@
-# Install script for directory: /home/star/workspace/distribution_system
+# Install script for directory: /home/star/workspace/distribution_frame
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/star/workspace/distribution_system/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/star/workspace/distribution_frame/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
