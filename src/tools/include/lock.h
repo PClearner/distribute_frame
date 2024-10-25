@@ -13,11 +13,11 @@ namespace star
     public:
         typedef std::shared_ptr<Locker> ptr;
 
-        Locker();
+        Locker(std::mutex *locker);
         ~Locker();
 
     private:
-        std::mutex mtx;
+        std::mutex *m_mtx;
     };
 
 }

@@ -1,17 +1,82 @@
 [
 {
   "directory": "/home/star/workspace/distribution_frame/build",
-  "command": "/usr/bin/g++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/log.dir/app/tools/logmain.cpp.o -c /home/star/workspace/distribution_frame/app/tools/logmain.cpp",
-  "file": "/home/star/workspace/distribution_frame/app/tools/logmain.cpp"
-},
-{
-  "directory": "/home/star/workspace/distribution_frame/build",
-  "command": "/usr/bin/g++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/log.dir/src/tools/lock.cpp.o -c /home/star/workspace/distribution_frame/src/tools/lock.cpp",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/log.dir/src/tools/lock.cpp.o -c /home/star/workspace/distribution_frame/src/tools/lock.cpp",
   "file": "/home/star/workspace/distribution_frame/src/tools/lock.cpp"
 },
 {
   "directory": "/home/star/workspace/distribution_frame/build",
-  "command": "/usr/bin/g++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/log.dir/src/tools/logger.cpp.o -c /home/star/workspace/distribution_frame/src/tools/logger.cpp",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/log.dir/src/tools/logger.cpp.o -c /home/star/workspace/distribution_frame/src/tools/logger.cpp",
   "file": "/home/star/workspace/distribution_frame/src/tools/logger.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/log.dir/app/tools/logmain.cpp.o -c /home/star/workspace/distribution_frame/app/tools/logmain.cpp",
+  "file": "/home/star/workspace/distribution_frame/app/tools/logmain.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/inittest.dir/src/tools/lock.cpp.o -c /home/star/workspace/distribution_frame/src/tools/lock.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/tools/lock.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/inittest.dir/src/tools/logger.cpp.o -c /home/star/workspace/distribution_frame/src/tools/logger.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/tools/logger.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/inittest.dir/src/rpc/init.cpp.o -c /home/star/workspace/distribution_frame/src/rpc/init.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/rpc/init.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/inittest.dir/test/inittest.cpp.o -c /home/star/workspace/distribution_frame/test/inittest.cpp",
+  "file": "/home/star/workspace/distribution_frame/test/inittest.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/protobuftest.dir/test/protobuftest.cpp.o -c /home/star/workspace/distribution_frame/test/protobuftest.cpp",
+  "file": "/home/star/workspace/distribution_frame/test/protobuftest.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/protobuftest.dir/src/rpc/rpcheader.pb.cc.o -c /home/star/workspace/distribution_frame/src/rpc/rpcheader.pb.cc",
+  "file": "/home/star/workspace/distribution_frame/src/rpc/rpcheader.pb.cc"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/provier.dir/test/rpc/provider.cpp.o -c /home/star/workspace/distribution_frame/test/rpc/provider.cpp",
+  "file": "/home/star/workspace/distribution_frame/test/rpc/provider.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/provier.dir/src/tools/lock.cpp.o -c /home/star/workspace/distribution_frame/src/tools/lock.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/tools/lock.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/provier.dir/src/tools/logger.cpp.o -c /home/star/workspace/distribution_frame/src/tools/logger.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/tools/logger.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/provier.dir/src/rpc/init.cpp.o -c /home/star/workspace/distribution_frame/src/rpc/init.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/rpc/init.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/provier.dir/src/rpc/rpcheader.pb.cc.o -c /home/star/workspace/distribution_frame/src/rpc/rpcheader.pb.cc",
+  "file": "/home/star/workspace/distribution_frame/src/rpc/rpcheader.pb.cc"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/provier.dir/src/rpc/rpcprovider.cpp.o -c /home/star/workspace/distribution_frame/src/rpc/rpcprovider.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/rpc/rpcprovider.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/provier.dir/src/rpc/zookeeperutil.cpp.o -c /home/star/workspace/distribution_frame/src/rpc/zookeeperutil.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/rpc/zookeeperutil.cpp"
 }
 ]

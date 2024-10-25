@@ -129,6 +129,45 @@ log/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/build
 .PHONY : log/fast
 
+#=============================================================================
+# Target rules for targets named inittest
+
+# Build rule for target.
+inittest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 inittest
+.PHONY : inittest
+
+# fast build rule for target.
+inittest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/build
+.PHONY : inittest/fast
+
+#=============================================================================
+# Target rules for targets named protobuftest
+
+# Build rule for target.
+protobuftest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 protobuftest
+.PHONY : protobuftest
+
+# fast build rule for target.
+protobuftest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuftest.dir/build.make CMakeFiles/protobuftest.dir/build
+.PHONY : protobuftest/fast
+
+#=============================================================================
+# Target rules for targets named provier
+
+# Build rule for target.
+provier: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 provier
+.PHONY : provier
+
+# fast build rule for target.
+provier/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/build
+.PHONY : provier/fast
+
 app/tools/logmain.o: app/tools/logmain.cpp.o
 .PHONY : app/tools/logmain.o
 
@@ -153,12 +192,116 @@ app/tools/logmain.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/app/tools/logmain.cpp.s
 .PHONY : app/tools/logmain.cpp.s
 
+src/rpc/init.o: src/rpc/init.cpp.o
+.PHONY : src/rpc/init.o
+
+# target to build an object file
+src/rpc/init.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/src/rpc/init.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/rpc/init.cpp.o
+.PHONY : src/rpc/init.cpp.o
+
+src/rpc/init.i: src/rpc/init.cpp.i
+.PHONY : src/rpc/init.i
+
+# target to preprocess a source file
+src/rpc/init.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/src/rpc/init.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/rpc/init.cpp.i
+.PHONY : src/rpc/init.cpp.i
+
+src/rpc/init.s: src/rpc/init.cpp.s
+.PHONY : src/rpc/init.s
+
+# target to generate assembly for a file
+src/rpc/init.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/src/rpc/init.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/rpc/init.cpp.s
+.PHONY : src/rpc/init.cpp.s
+
+src/rpc/rpcheader.pb.o: src/rpc/rpcheader.pb.cc.o
+.PHONY : src/rpc/rpcheader.pb.o
+
+# target to build an object file
+src/rpc/rpcheader.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuftest.dir/build.make CMakeFiles/protobuftest.dir/src/rpc/rpcheader.pb.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/rpc/rpcheader.pb.cc.o
+.PHONY : src/rpc/rpcheader.pb.cc.o
+
+src/rpc/rpcheader.pb.i: src/rpc/rpcheader.pb.cc.i
+.PHONY : src/rpc/rpcheader.pb.i
+
+# target to preprocess a source file
+src/rpc/rpcheader.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuftest.dir/build.make CMakeFiles/protobuftest.dir/src/rpc/rpcheader.pb.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/rpc/rpcheader.pb.cc.i
+.PHONY : src/rpc/rpcheader.pb.cc.i
+
+src/rpc/rpcheader.pb.s: src/rpc/rpcheader.pb.cc.s
+.PHONY : src/rpc/rpcheader.pb.s
+
+# target to generate assembly for a file
+src/rpc/rpcheader.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuftest.dir/build.make CMakeFiles/protobuftest.dir/src/rpc/rpcheader.pb.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/rpc/rpcheader.pb.cc.s
+.PHONY : src/rpc/rpcheader.pb.cc.s
+
+src/rpc/rpcprovider.o: src/rpc/rpcprovider.cpp.o
+.PHONY : src/rpc/rpcprovider.o
+
+# target to build an object file
+src/rpc/rpcprovider.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/rpc/rpcprovider.cpp.o
+.PHONY : src/rpc/rpcprovider.cpp.o
+
+src/rpc/rpcprovider.i: src/rpc/rpcprovider.cpp.i
+.PHONY : src/rpc/rpcprovider.i
+
+# target to preprocess a source file
+src/rpc/rpcprovider.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/rpc/rpcprovider.cpp.i
+.PHONY : src/rpc/rpcprovider.cpp.i
+
+src/rpc/rpcprovider.s: src/rpc/rpcprovider.cpp.s
+.PHONY : src/rpc/rpcprovider.s
+
+# target to generate assembly for a file
+src/rpc/rpcprovider.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/rpc/rpcprovider.cpp.s
+.PHONY : src/rpc/rpcprovider.cpp.s
+
+src/rpc/zookeeperutil.o: src/rpc/zookeeperutil.cpp.o
+.PHONY : src/rpc/zookeeperutil.o
+
+# target to build an object file
+src/rpc/zookeeperutil.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/rpc/zookeeperutil.cpp.o
+.PHONY : src/rpc/zookeeperutil.cpp.o
+
+src/rpc/zookeeperutil.i: src/rpc/zookeeperutil.cpp.i
+.PHONY : src/rpc/zookeeperutil.i
+
+# target to preprocess a source file
+src/rpc/zookeeperutil.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/rpc/zookeeperutil.cpp.i
+.PHONY : src/rpc/zookeeperutil.cpp.i
+
+src/rpc/zookeeperutil.s: src/rpc/zookeeperutil.cpp.s
+.PHONY : src/rpc/zookeeperutil.s
+
+# target to generate assembly for a file
+src/rpc/zookeeperutil.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/rpc/zookeeperutil.cpp.s
+.PHONY : src/rpc/zookeeperutil.cpp.s
+
 src/tools/lock.o: src/tools/lock.cpp.o
 .PHONY : src/tools/lock.o
 
 # target to build an object file
 src/tools/lock.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/tools/lock.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/src/tools/lock.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/tools/lock.cpp.o
 .PHONY : src/tools/lock.cpp.o
 
 src/tools/lock.i: src/tools/lock.cpp.i
@@ -167,6 +310,8 @@ src/tools/lock.i: src/tools/lock.cpp.i
 # target to preprocess a source file
 src/tools/lock.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/tools/lock.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/src/tools/lock.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/tools/lock.cpp.i
 .PHONY : src/tools/lock.cpp.i
 
 src/tools/lock.s: src/tools/lock.cpp.s
@@ -175,6 +320,8 @@ src/tools/lock.s: src/tools/lock.cpp.s
 # target to generate assembly for a file
 src/tools/lock.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/tools/lock.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/src/tools/lock.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/tools/lock.cpp.s
 .PHONY : src/tools/lock.cpp.s
 
 src/tools/logger.o: src/tools/logger.cpp.o
@@ -183,6 +330,8 @@ src/tools/logger.o: src/tools/logger.cpp.o
 # target to build an object file
 src/tools/logger.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/tools/logger.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/src/tools/logger.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/tools/logger.cpp.o
 .PHONY : src/tools/logger.cpp.o
 
 src/tools/logger.i: src/tools/logger.cpp.i
@@ -191,6 +340,8 @@ src/tools/logger.i: src/tools/logger.cpp.i
 # target to preprocess a source file
 src/tools/logger.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/tools/logger.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/src/tools/logger.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/tools/logger.cpp.i
 .PHONY : src/tools/logger.cpp.i
 
 src/tools/logger.s: src/tools/logger.cpp.s
@@ -199,7 +350,81 @@ src/tools/logger.s: src/tools/logger.cpp.s
 # target to generate assembly for a file
 src/tools/logger.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/src/tools/logger.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/src/tools/logger.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/src/tools/logger.cpp.s
 .PHONY : src/tools/logger.cpp.s
+
+test/inittest.o: test/inittest.cpp.o
+.PHONY : test/inittest.o
+
+# target to build an object file
+test/inittest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/test/inittest.cpp.o
+.PHONY : test/inittest.cpp.o
+
+test/inittest.i: test/inittest.cpp.i
+.PHONY : test/inittest.i
+
+# target to preprocess a source file
+test/inittest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/test/inittest.cpp.i
+.PHONY : test/inittest.cpp.i
+
+test/inittest.s: test/inittest.cpp.s
+.PHONY : test/inittest.s
+
+# target to generate assembly for a file
+test/inittest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/test/inittest.cpp.s
+.PHONY : test/inittest.cpp.s
+
+test/protobuftest.o: test/protobuftest.cpp.o
+.PHONY : test/protobuftest.o
+
+# target to build an object file
+test/protobuftest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuftest.dir/build.make CMakeFiles/protobuftest.dir/test/protobuftest.cpp.o
+.PHONY : test/protobuftest.cpp.o
+
+test/protobuftest.i: test/protobuftest.cpp.i
+.PHONY : test/protobuftest.i
+
+# target to preprocess a source file
+test/protobuftest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuftest.dir/build.make CMakeFiles/protobuftest.dir/test/protobuftest.cpp.i
+.PHONY : test/protobuftest.cpp.i
+
+test/protobuftest.s: test/protobuftest.cpp.s
+.PHONY : test/protobuftest.s
+
+# target to generate assembly for a file
+test/protobuftest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuftest.dir/build.make CMakeFiles/protobuftest.dir/test/protobuftest.cpp.s
+.PHONY : test/protobuftest.cpp.s
+
+test/rpc/provider.o: test/rpc/provider.cpp.o
+.PHONY : test/rpc/provider.o
+
+# target to build an object file
+test/rpc/provider.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/test/rpc/provider.cpp.o
+.PHONY : test/rpc/provider.cpp.o
+
+test/rpc/provider.i: test/rpc/provider.cpp.i
+.PHONY : test/rpc/provider.i
+
+# target to preprocess a source file
+test/rpc/provider.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/test/rpc/provider.cpp.i
+.PHONY : test/rpc/provider.cpp.i
+
+test/rpc/provider.s: test/rpc/provider.cpp.s
+.PHONY : test/rpc/provider.s
+
+# target to generate assembly for a file
+test/rpc/provider.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/test/rpc/provider.cpp.s
+.PHONY : test/rpc/provider.cpp.s
 
 # Help Target
 help:
@@ -209,16 +434,40 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... inittest"
 	@echo "... log"
+	@echo "... protobuftest"
+	@echo "... provier"
 	@echo "... app/tools/logmain.o"
 	@echo "... app/tools/logmain.i"
 	@echo "... app/tools/logmain.s"
+	@echo "... src/rpc/init.o"
+	@echo "... src/rpc/init.i"
+	@echo "... src/rpc/init.s"
+	@echo "... src/rpc/rpcheader.pb.o"
+	@echo "... src/rpc/rpcheader.pb.i"
+	@echo "... src/rpc/rpcheader.pb.s"
+	@echo "... src/rpc/rpcprovider.o"
+	@echo "... src/rpc/rpcprovider.i"
+	@echo "... src/rpc/rpcprovider.s"
+	@echo "... src/rpc/zookeeperutil.o"
+	@echo "... src/rpc/zookeeperutil.i"
+	@echo "... src/rpc/zookeeperutil.s"
 	@echo "... src/tools/lock.o"
 	@echo "... src/tools/lock.i"
 	@echo "... src/tools/lock.s"
 	@echo "... src/tools/logger.o"
 	@echo "... src/tools/logger.i"
 	@echo "... src/tools/logger.s"
+	@echo "... test/inittest.o"
+	@echo "... test/inittest.i"
+	@echo "... test/inittest.s"
+	@echo "... test/protobuftest.o"
+	@echo "... test/protobuftest.i"
+	@echo "... test/protobuftest.s"
+	@echo "... test/rpc/provider.o"
+	@echo "... test/rpc/provider.i"
+	@echo "... test/rpc/provider.s"
 .PHONY : help
 
 

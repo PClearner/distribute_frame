@@ -64,6 +64,9 @@ CMAKE_BINARY_DIR = /home/star/workspace/distribution_frame/build
 
 # The main recursive "all" target.
 all: CMakeFiles/log.dir/all
+all: CMakeFiles/inittest.dir/all
+all: CMakeFiles/protobuftest.dir/all
+all: CMakeFiles/provier.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +75,9 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/log.dir/clean
+clean: CMakeFiles/inittest.dir/clean
+clean: CMakeFiles/protobuftest.dir/clean
+clean: CMakeFiles/provier.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -81,7 +87,7 @@ clean: CMakeFiles/log.dir/clean
 CMakeFiles/log.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=1,2,3,4 "Built target log"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=6,7,8,9 "Built target log"
 .PHONY : CMakeFiles/log.dir/all
 
 # Build rule for subdir invocation for target.
@@ -99,6 +105,84 @@ log: CMakeFiles/log.dir/rule
 CMakeFiles/log.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/clean
 .PHONY : CMakeFiles/log.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/inittest.dir
+
+# All Build rule for target.
+CMakeFiles/inittest.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target inittest"
+.PHONY : CMakeFiles/inittest.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/inittest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/inittest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 0
+.PHONY : CMakeFiles/inittest.dir/rule
+
+# Convenience name for target.
+inittest: CMakeFiles/inittest.dir/rule
+.PHONY : inittest
+
+# clean rule for target.
+CMakeFiles/inittest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/clean
+.PHONY : CMakeFiles/inittest.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/protobuftest.dir
+
+# All Build rule for target.
+CMakeFiles/protobuftest.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuftest.dir/build.make CMakeFiles/protobuftest.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuftest.dir/build.make CMakeFiles/protobuftest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=10,11,12 "Built target protobuftest"
+.PHONY : CMakeFiles/protobuftest.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/protobuftest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/protobuftest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 0
+.PHONY : CMakeFiles/protobuftest.dir/rule
+
+# Convenience name for target.
+protobuftest: CMakeFiles/protobuftest.dir/rule
+.PHONY : protobuftest
+
+# clean rule for target.
+CMakeFiles/protobuftest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuftest.dir/build.make CMakeFiles/protobuftest.dir/clean
+.PHONY : CMakeFiles/protobuftest.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/provier.dir
+
+# All Build rule for target.
+CMakeFiles/provier.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=13,14,15,16,17,18,19,20 "Built target provier"
+.PHONY : CMakeFiles/provier.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/provier.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/provier.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 0
+.PHONY : CMakeFiles/provier.dir/rule
+
+# Convenience name for target.
+provier: CMakeFiles/provier.dir/rule
+.PHONY : provier
+
+# clean rule for target.
+CMakeFiles/provier.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/clean
+.PHONY : CMakeFiles/provier.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

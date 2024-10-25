@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/test.dir/app/test1.cpp.o -o ../bin/test  ../lib/libmuduo_net.a ../lib/libmuduo_base.a -lpthread 

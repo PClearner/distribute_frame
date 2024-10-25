@@ -69,60 +69,60 @@ include CMakeFiles/log.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/log.dir/flags.make
 
-CMakeFiles/log.dir/app/tools/logmain.cpp.o: CMakeFiles/log.dir/flags.make
-CMakeFiles/log.dir/app/tools/logmain.cpp.o: ../app/tools/logmain.cpp
-CMakeFiles/log.dir/app/tools/logmain.cpp.o: CMakeFiles/log.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/log.dir/app/tools/logmain.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/log.dir/app/tools/logmain.cpp.o -MF CMakeFiles/log.dir/app/tools/logmain.cpp.o.d -o CMakeFiles/log.dir/app/tools/logmain.cpp.o -c /home/star/workspace/distribution_frame/app/tools/logmain.cpp
-
-CMakeFiles/log.dir/app/tools/logmain.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/log.dir/app/tools/logmain.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/star/workspace/distribution_frame/app/tools/logmain.cpp > CMakeFiles/log.dir/app/tools/logmain.cpp.i
-
-CMakeFiles/log.dir/app/tools/logmain.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/log.dir/app/tools/logmain.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/star/workspace/distribution_frame/app/tools/logmain.cpp -o CMakeFiles/log.dir/app/tools/logmain.cpp.s
-
 CMakeFiles/log.dir/src/tools/lock.cpp.o: CMakeFiles/log.dir/flags.make
 CMakeFiles/log.dir/src/tools/lock.cpp.o: ../src/tools/lock.cpp
 CMakeFiles/log.dir/src/tools/lock.cpp.o: CMakeFiles/log.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/log.dir/src/tools/lock.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/log.dir/src/tools/lock.cpp.o -MF CMakeFiles/log.dir/src/tools/lock.cpp.o.d -o CMakeFiles/log.dir/src/tools/lock.cpp.o -c /home/star/workspace/distribution_frame/src/tools/lock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/log.dir/src/tools/lock.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/log.dir/src/tools/lock.cpp.o -MF CMakeFiles/log.dir/src/tools/lock.cpp.o.d -o CMakeFiles/log.dir/src/tools/lock.cpp.o -c /home/star/workspace/distribution_frame/src/tools/lock.cpp
 
 CMakeFiles/log.dir/src/tools/lock.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/log.dir/src/tools/lock.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/star/workspace/distribution_frame/src/tools/lock.cpp > CMakeFiles/log.dir/src/tools/lock.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/star/workspace/distribution_frame/src/tools/lock.cpp > CMakeFiles/log.dir/src/tools/lock.cpp.i
 
 CMakeFiles/log.dir/src/tools/lock.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/log.dir/src/tools/lock.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/star/workspace/distribution_frame/src/tools/lock.cpp -o CMakeFiles/log.dir/src/tools/lock.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/star/workspace/distribution_frame/src/tools/lock.cpp -o CMakeFiles/log.dir/src/tools/lock.cpp.s
 
 CMakeFiles/log.dir/src/tools/logger.cpp.o: CMakeFiles/log.dir/flags.make
 CMakeFiles/log.dir/src/tools/logger.cpp.o: ../src/tools/logger.cpp
 CMakeFiles/log.dir/src/tools/logger.cpp.o: CMakeFiles/log.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/log.dir/src/tools/logger.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/log.dir/src/tools/logger.cpp.o -MF CMakeFiles/log.dir/src/tools/logger.cpp.o.d -o CMakeFiles/log.dir/src/tools/logger.cpp.o -c /home/star/workspace/distribution_frame/src/tools/logger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/log.dir/src/tools/logger.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/log.dir/src/tools/logger.cpp.o -MF CMakeFiles/log.dir/src/tools/logger.cpp.o.d -o CMakeFiles/log.dir/src/tools/logger.cpp.o -c /home/star/workspace/distribution_frame/src/tools/logger.cpp
 
 CMakeFiles/log.dir/src/tools/logger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/log.dir/src/tools/logger.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/star/workspace/distribution_frame/src/tools/logger.cpp > CMakeFiles/log.dir/src/tools/logger.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/star/workspace/distribution_frame/src/tools/logger.cpp > CMakeFiles/log.dir/src/tools/logger.cpp.i
 
 CMakeFiles/log.dir/src/tools/logger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/log.dir/src/tools/logger.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/star/workspace/distribution_frame/src/tools/logger.cpp -o CMakeFiles/log.dir/src/tools/logger.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/star/workspace/distribution_frame/src/tools/logger.cpp -o CMakeFiles/log.dir/src/tools/logger.cpp.s
+
+CMakeFiles/log.dir/app/tools/logmain.cpp.o: CMakeFiles/log.dir/flags.make
+CMakeFiles/log.dir/app/tools/logmain.cpp.o: ../app/tools/logmain.cpp
+CMakeFiles/log.dir/app/tools/logmain.cpp.o: CMakeFiles/log.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/log.dir/app/tools/logmain.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/log.dir/app/tools/logmain.cpp.o -MF CMakeFiles/log.dir/app/tools/logmain.cpp.o.d -o CMakeFiles/log.dir/app/tools/logmain.cpp.o -c /home/star/workspace/distribution_frame/app/tools/logmain.cpp
+
+CMakeFiles/log.dir/app/tools/logmain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/log.dir/app/tools/logmain.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/star/workspace/distribution_frame/app/tools/logmain.cpp > CMakeFiles/log.dir/app/tools/logmain.cpp.i
+
+CMakeFiles/log.dir/app/tools/logmain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/log.dir/app/tools/logmain.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/star/workspace/distribution_frame/app/tools/logmain.cpp -o CMakeFiles/log.dir/app/tools/logmain.cpp.s
 
 # Object files for target log
 log_OBJECTS = \
-"CMakeFiles/log.dir/app/tools/logmain.cpp.o" \
 "CMakeFiles/log.dir/src/tools/lock.cpp.o" \
-"CMakeFiles/log.dir/src/tools/logger.cpp.o"
+"CMakeFiles/log.dir/src/tools/logger.cpp.o" \
+"CMakeFiles/log.dir/app/tools/logmain.cpp.o"
 
 # External object files for target log
 log_EXTERNAL_OBJECTS =
 
-../bin/log: CMakeFiles/log.dir/app/tools/logmain.cpp.o
 ../bin/log: CMakeFiles/log.dir/src/tools/lock.cpp.o
 ../bin/log: CMakeFiles/log.dir/src/tools/logger.cpp.o
+../bin/log: CMakeFiles/log.dir/app/tools/logmain.cpp.o
 ../bin/log: CMakeFiles/log.dir/build.make
 ../bin/log: CMakeFiles/log.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../bin/log"

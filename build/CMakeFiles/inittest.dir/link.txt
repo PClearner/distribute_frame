@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/inittest.dir/src/tools/lock.cpp.o CMakeFiles/inittest.dir/src/tools/logger.cpp.o CMakeFiles/inittest.dir/src/rpc/init.cpp.o CMakeFiles/inittest.dir/test/inittest.cpp.o -o ../bin/inittest   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib ../lib/libyaml-cpp.a 

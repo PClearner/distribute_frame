@@ -72,6 +72,33 @@ namespace star
             return m_file;
         }
 
+        inline void set_level_threshold(Level l)
+        {
+            m_level_threshold = l;
+        }
+
+        inline std::string get_level_threshold() const
+        {
+            std::string res;
+            if (m_level_threshold == Level::Info)
+            {
+                res = "INFO";
+            }
+            else if (m_level_threshold == Level::Debug)
+            {
+                res = "DEBUG";
+            }
+            else if (m_level_threshold == Level::Error)
+            {
+                res = "ERROR";
+            }
+            else if (m_level_threshold == Level::Fatal)
+            {
+                res = "FATAL";
+            }
+            return res;
+        }
+
         void restart();
         void killlogger();
 
@@ -85,7 +112,14 @@ namespace star
         std::ofstream ofs;
         std::thread m_thread;
         std::atomic<bool> state;
+        Locker::ptr m_mutex;
     };
+
+
+
+
+
+
     class LoggerWrapper
     {
     public:

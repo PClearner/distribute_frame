@@ -3,14 +3,15 @@
 namespace star
 {
 
-    Locker::Locker()
+    Locker::Locker(std::mutex *locker)
     {
-        this->mtx.lock();
+        m_mtx = locker;
+        this->m_mtx->lock();
     }
 
     Locker::~Locker()
     {
-        this->mtx.unlock();
+        this->m_mtx->unlock();
     }
 
 }
