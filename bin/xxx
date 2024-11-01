@@ -24,3 +24,126 @@
 [INFO][2024-10-07 15:58:48] thread 136064323945408:show port:8080
 [INFO][2024-10-07 15:58:48] thread 136064323945408:show zkip:192.168.50.203
 [INFO][2024-10-07 15:58:48] thread 136064323945408:show zkport:8090
+[INFO][2024-10-25 19:48:59] thread 132491351542272:Rpcinit over
+[INFO][2024-10-25 19:54:55] thread 135965088942592:Rpcinit over
+[INFO][2024-10-25 20:03:02] thread 140737353509376:Rpcinit over
+[INFO][2024-10-25 20:03:02] thread 140737328973376:zookeeper_init success!
+[INFO][2024-10-25 20:07:17] thread 140737353509376:Rpcinit over
+[DEBUG][2024-10-25 20:07:17] thread 140737328973376:server init over
+[DEBUG][2024-10-25 20:07:17] thread 140737353509376:provider init sucess
+[INFO][2024-10-25 20:07:17] thread 140737328973376:zookeeper_init success!
+[INFO][2024-10-25 20:09:45] thread 140737353509376:Rpcinit over
+[DEBUG][2024-10-25 20:09:45] thread 140737353509376:provider init sucess
+[DEBUG][2024-10-25 20:09:45] thread 140737353509376:provider delete
+[DEBUG][2024-10-25 20:09:45] thread 140737328973376:server init over
+[INFO][2024-10-25 20:09:45] thread 140737328973376:zookeeper_init success!
+[INFO][2024-10-25 20:35:01] thread 140737353509376:Rpcinit over
+[DEBUG][2024-10-25 20:35:06] thread 140737353509376:provider create
+[DEBUG][2024-10-25 20:35:06] thread 140737353509376:provider set
+[DEBUG][2024-10-25 20:35:06] thread 140737328973376:server init over
+[DEBUG][2024-10-25 20:35:06] thread 140737353509376:provider init sucess
+[DEBUG][2024-10-25 20:35:11] thread 140737353509376:addservice
+[INFO][2024-10-25 20:35:13] thread 140737328973376:zookeeper_init success!
+[DEBUG][2024-10-25 20:35:13] thread 140737353509376:begin to input mp
+[INFO][2024-10-25 20:35:13] thread 140737353509376:znode create successfully!
+[INFO][2024-10-25 20:35:13] thread 140737353509376:znode create successfully!
+[DEBUG][2024-10-25 20:35:17] thread 140737353509376:provider delete
+[INFO][2024-10-25 20:38:42] thread 128631801293312:Rpcinit over
+[DEBUG][2024-10-25 20:38:42] thread 128631801293312:provider create
+[DEBUG][2024-10-25 20:38:42] thread 128631801293312:provider set
+[DEBUG][2024-10-25 20:38:42] thread 128631801293312:provider init sucess
+[DEBUG][2024-10-25 20:38:42] thread 128631801293312:addservice
+[DEBUG][2024-10-25 20:38:42] thread 128631801293312:provider delete
+[DEBUG][2024-10-25 20:38:42] thread 128631777003072:server init over
+[INFO][2024-10-25 20:38:42] thread 128631777003072:zookeeper_init success!
+[INFO][2024-10-25 20:51:55] thread 136145213360640:Rpcinit over
+[DEBUG][2024-10-25 20:51:55] thread 136145213360640:provider create
+[DEBUG][2024-10-25 20:51:55] thread 136145213360640:provider set
+[DEBUG][2024-10-25 20:51:55] thread 136145213360640:provider init sucess
+[DEBUG][2024-10-25 20:51:55] thread 136145213360640:addservice
+[DEBUG][2024-10-25 20:51:55] thread 136145188947520:server init over
+[INFO][2024-10-25 20:51:55] thread 136145188947520:zookeeper_init success!
+[INFO][2024-10-25 20:52:05] thread 136145213360640:znode create successfully!
+[INFO][2024-10-25 20:52:05] thread 136145213360640:znode create successfully!
+[DEBUG][2024-10-25 20:52:05] thread 136145213360640:provider delete
+[INFO][2024-10-25 20:55:37] thread 126207333992960:Rpcinit over
+[DEBUG][2024-10-25 20:55:37] thread 126207333992960:provider create
+[DEBUG][2024-10-25 20:55:37] thread 126207333992960:provider set
+[DEBUG][2024-10-25 20:55:37] thread 126207333992960:provider init sucess
+[DEBUG][2024-10-25 20:55:37] thread 126207333992960:addservice
+[DEBUG][2024-10-25 20:55:37] thread 126207309907520:server init over
+[INFO][2024-10-25 20:55:37] thread 126207309907520:zookeeper_init success!
+[INFO][2024-10-25 20:55:47] thread 126207333992960:znode create successfully!
+[INFO][2024-10-25 20:55:47] thread 126207333992960:znode create successfully!
+[INFO][2024-10-25 20:56:23] thread 123153319082496:Rpcinit over
+[DEBUG][2024-10-25 20:56:23] thread 123153319082496:provider create
+[DEBUG][2024-10-25 20:56:23] thread 123153319082496:provider set
+[DEBUG][2024-10-25 20:56:23] thread 123153319082496:provider init sucess
+[DEBUG][2024-10-25 20:56:23] thread 123153319082496:addservice
+[DEBUG][2024-10-25 20:56:23] thread 123153294558784:server init over
+[INFO][2024-10-25 20:56:24] thread 123153294558784:zookeeper_init success!
+[INFO][2024-10-25 20:56:24] thread 123153319082496:znode create successfully!
+[INFO][2024-10-25 20:56:24] thread 123153319082496:znode create successfully!
+[DEBUG][2024-10-25 20:56:24] thread 123153319082496:provider delete
+[INFO][2024-10-25 20:56:38] thread 126031208884736:Rpcinit over
+[INFO][2024-10-25 20:56:38] thread 126031208884736:======================
+[INFO][2024-10-25 20:56:38] thread 126031208884736:header_size: 20
+[INFO][2024-10-25 20:56:38] thread 126031208884736:rpc_header_str: 
+UserserviceAdd
+[INFO][2024-10-25 20:56:38] thread 126031208884736:service_name: Userservice
+[INFO][2024-10-25 20:56:38] thread 126031208884736:method_name: Add
+[INFO][2024-10-25 20:56:38] thread 126031208884736:args_str:  
+
+[INFO][2024-10-25 20:56:38] thread 126031208884736:======================
+[INFO][2024-10-25 20:56:38] thread 126031208884736:zookeeper_init success!
+[INFO][2024-10-25 20:56:38] thread 126031208884736:response = 42
+[INFO][2024-10-25 20:56:38] thread 123153263101504:calculate arg1 + arg2=42
+[INFO][2024-10-25 20:56:50] thread 132307410070016:Rpcinit over
+[INFO][2024-10-25 20:56:50] thread 132307410070016:======================
+[INFO][2024-10-25 20:56:50] thread 132307410070016:header_size: 20
+[INFO][2024-10-25 20:56:50] thread 132307410070016:rpc_header_str: 
+UserserviceAdd
+[INFO][2024-10-25 20:56:50] thread 132307410070016:service_name: Userservice
+[INFO][2024-10-25 20:56:50] thread 132307410070016:method_name: Add
+[INFO][2024-10-25 20:56:50] thread 132307410070016:args_str:  
+
+[INFO][2024-10-25 20:56:50] thread 132307410070016:======================
+[INFO][2024-10-25 20:56:58] thread 134539780123136:Rpcinit over
+[INFO][2024-10-25 20:56:58] thread 134539780123136:======================
+[INFO][2024-10-25 20:56:58] thread 134539780123136:header_size: 20
+[INFO][2024-10-25 20:56:58] thread 134539780123136:rpc_header_str: 
+UserserviceAdd
+[INFO][2024-10-25 20:56:58] thread 134539780123136:service_name: Userservice
+[INFO][2024-10-25 20:56:58] thread 134539780123136:method_name: Add
+[INFO][2024-10-25 20:56:58] thread 134539780123136:args_str:  
+
+[INFO][2024-10-25 20:56:58] thread 134539780123136:======================
+[INFO][2024-10-25 20:56:58] thread 134539780123136:zookeeper_init success!
+[INFO][2024-10-25 20:56:58] thread 134539780123136:response = 42
+[INFO][2024-10-25 20:56:58] thread 123153252615744:calculate arg1 + arg2=42
+[INFO][2024-10-25 20:57:12] thread 135054098299392:Rpcinit over
+[INFO][2024-10-25 20:57:12] thread 135054098299392:======================
+[INFO][2024-10-25 20:57:12] thread 135054098299392:header_size: 20
+[INFO][2024-10-25 20:57:12] thread 135054098299392:rpc_header_str: 
+UserserviceAdd
+[INFO][2024-10-25 20:57:12] thread 135054098299392:service_name: Userservice
+[INFO][2024-10-25 20:57:12] thread 135054098299392:method_name: Add
+[INFO][2024-10-25 20:57:12] thread 135054098299392:args_str:  
+
+[INFO][2024-10-25 20:57:12] thread 135054098299392:======================
+[INFO][2024-10-25 20:57:12] thread 135054098299392:zookeeper_init success!
+[INFO][2024-10-25 20:57:12] thread 135054098299392:response = 42
+[INFO][2024-10-25 20:57:12] thread 123153242129984:calculate arg1 + arg2=42
+[INFO][2024-10-25 20:57:16] thread 123153231644224:calculate arg1 + arg2=42
+[INFO][2024-10-25 20:57:16] thread 125452059388416:Rpcinit over
+[INFO][2024-10-25 20:57:16] thread 125452059388416:======================
+[INFO][2024-10-25 20:57:16] thread 125452059388416:header_size: 20
+[INFO][2024-10-25 20:57:16] thread 125452059388416:rpc_header_str: 
+UserserviceAdd
+[INFO][2024-10-25 20:57:16] thread 125452059388416:service_name: Userservice
+[INFO][2024-10-25 20:57:16] thread 125452059388416:method_name: Add
+[INFO][2024-10-25 20:57:16] thread 125452059388416:args_str:  
+
+[INFO][2024-10-25 20:57:16] thread 125452059388416:======================
+[INFO][2024-10-25 20:57:16] thread 125452059388416:zookeeper_init success!
+[INFO][2024-10-25 20:57:16] thread 125452059388416:response = 42

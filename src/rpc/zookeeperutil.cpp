@@ -35,10 +35,9 @@ namespace star
     {
 
         // 加载zk的IP和端口号，默认为2181
-        std::string host = Rpcinit::GetInstance()->get_zkip();
-        std::string port = Rpcinit::GetInstance()->get_zkport();
+        std::string host = Rpcinit::GetInstance()->get_config("zkip");
+        std::string port = Rpcinit::GetInstance()->get_config("zkport");
         std::string connstr = host + ":" + port;
-
         m_zhandle = zookeeper_init(connstr.c_str(), global_watcher, 30000, nullptr, nullptr, 0);
         if (m_zhandle == nullptr)
         {
@@ -51,7 +50,7 @@ namespace star
         zoo_set_context(m_zhandle, &sem); // 设置上下文，添加额外信息
 
         sem_wait(&sem);
-        LOG_MAIN_INFO << "zookeeper_init success!";
+        LOG_MAIN_DEBUG << "zookeeper_init success!";
     }
 
     // 在zkserver上根据指定的path创建znode结点
@@ -69,7 +68,7 @@ namespace star
                               state, path_buffer, bufferlen);
             if (flag == ZOK)
             {
-                LOG_MAIN_INFO << "znode create successfully!";
+                LOG_MAIN_DEBUG << "znode create successfully!";
             }
             else
             {

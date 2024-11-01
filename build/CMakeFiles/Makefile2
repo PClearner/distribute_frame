@@ -66,19 +66,51 @@ CMAKE_BINARY_DIR = /home/star/workspace/distribution_frame/build
 all: CMakeFiles/log.dir/all
 all: CMakeFiles/inittest.dir/all
 all: CMakeFiles/protobuftest.dir/all
-all: CMakeFiles/provier.dir/all
+all: app/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: app/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/log.dir/clean
 clean: CMakeFiles/inittest.dir/clean
 clean: CMakeFiles/protobuftest.dir/clean
-clean: CMakeFiles/provier.dir/clean
+clean: app/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory app
+
+# Recursive "all" directory target.
+app/all: app/rpc/all
+.PHONY : app/all
+
+# Recursive "preinstall" directory target.
+app/preinstall: app/rpc/preinstall
+.PHONY : app/preinstall
+
+# Recursive "clean" directory target.
+app/clean: app/rpc/clean
+.PHONY : app/clean
+
+#=============================================================================
+# Directory level rules for directory app/rpc
+
+# Recursive "all" directory target.
+app/rpc/all: app/rpc/CMakeFiles/provider.dir/all
+app/rpc/all: app/rpc/CMakeFiles/client.dir/all
+.PHONY : app/rpc/all
+
+# Recursive "preinstall" directory target.
+app/rpc/preinstall:
+.PHONY : app/rpc/preinstall
+
+# Recursive "clean" directory target.
+app/rpc/clean: app/rpc/CMakeFiles/provider.dir/clean
+app/rpc/clean: app/rpc/CMakeFiles/client.dir/clean
+.PHONY : app/rpc/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/log.dir
@@ -87,7 +119,7 @@ clean: CMakeFiles/provier.dir/clean
 CMakeFiles/log.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/log.dir/build.make CMakeFiles/log.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=6,7,8,9 "Built target log"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=16,17,18,19 "Built target log"
 .PHONY : CMakeFiles/log.dir/all
 
 # Build rule for subdir invocation for target.
@@ -113,7 +145,7 @@ CMakeFiles/log.dir/clean:
 CMakeFiles/inittest.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/inittest.dir/build.make CMakeFiles/inittest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target inittest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=11,12,13,14,15 "Built target inittest"
 .PHONY : CMakeFiles/inittest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -139,7 +171,7 @@ CMakeFiles/inittest.dir/clean:
 CMakeFiles/protobuftest.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuftest.dir/build.make CMakeFiles/protobuftest.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuftest.dir/build.make CMakeFiles/protobuftest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=10,11,12 "Built target protobuftest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=20,21,22 "Built target protobuftest"
 .PHONY : CMakeFiles/protobuftest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -159,30 +191,56 @@ CMakeFiles/protobuftest.dir/clean:
 .PHONY : CMakeFiles/protobuftest.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/provier.dir
+# Target rules for target app/rpc/CMakeFiles/provider.dir
 
 # All Build rule for target.
-CMakeFiles/provier.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=13,14,15,16,17,18,19,20 "Built target provier"
-.PHONY : CMakeFiles/provier.dir/all
+app/rpc/CMakeFiles/provider.dir/all:
+	$(MAKE) $(MAKESILENT) -f app/rpc/CMakeFiles/provider.dir/build.make app/rpc/CMakeFiles/provider.dir/depend
+	$(MAKE) $(MAKESILENT) -f app/rpc/CMakeFiles/provider.dir/build.make app/rpc/CMakeFiles/provider.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32 "Built target provider"
+.PHONY : app/rpc/CMakeFiles/provider.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/provier.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/provier.dir/all
+app/rpc/CMakeFiles/provider.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/rpc/CMakeFiles/provider.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 0
-.PHONY : CMakeFiles/provier.dir/rule
+.PHONY : app/rpc/CMakeFiles/provider.dir/rule
 
 # Convenience name for target.
-provier: CMakeFiles/provier.dir/rule
-.PHONY : provier
+provider: app/rpc/CMakeFiles/provider.dir/rule
+.PHONY : provider
 
 # clean rule for target.
-CMakeFiles/provier.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/provier.dir/build.make CMakeFiles/provier.dir/clean
-.PHONY : CMakeFiles/provier.dir/clean
+app/rpc/CMakeFiles/provider.dir/clean:
+	$(MAKE) $(MAKESILENT) -f app/rpc/CMakeFiles/provider.dir/build.make app/rpc/CMakeFiles/provider.dir/clean
+.PHONY : app/rpc/CMakeFiles/provider.dir/clean
+
+#=============================================================================
+# Target rules for target app/rpc/CMakeFiles/client.dir
+
+# All Build rule for target.
+app/rpc/CMakeFiles/client.dir/all:
+	$(MAKE) $(MAKESILENT) -f app/rpc/CMakeFiles/client.dir/build.make app/rpc/CMakeFiles/client.dir/depend
+	$(MAKE) $(MAKESILENT) -f app/rpc/CMakeFiles/client.dir/build.make app/rpc/CMakeFiles/client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target client"
+.PHONY : app/rpc/CMakeFiles/client.dir/all
+
+# Build rule for subdir invocation for target.
+app/rpc/CMakeFiles/client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/rpc/CMakeFiles/client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 0
+.PHONY : app/rpc/CMakeFiles/client.dir/rule
+
+# Convenience name for target.
+client: app/rpc/CMakeFiles/client.dir/rule
+.PHONY : client
+
+# clean rule for target.
+app/rpc/CMakeFiles/client.dir/clean:
+	$(MAKE) $(MAKESILENT) -f app/rpc/CMakeFiles/client.dir/build.make app/rpc/CMakeFiles/client.dir/clean
+.PHONY : app/rpc/CMakeFiles/client.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

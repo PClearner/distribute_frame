@@ -64,16 +64,16 @@ namespace star
         send_rpc_str += args_str;                                     // args
 
         // 打印调试信息
-        LOG_MAIN_INFO << "======================";
-        LOG_MAIN_INFO << "header_size: " << header_size;
-        LOG_MAIN_INFO << "rpc_header_str: " << rpc_header_str;
-        LOG_MAIN_INFO << "service_name: " << service_name;
-        LOG_MAIN_INFO << "method_name: " << method_name;
-        LOG_MAIN_INFO << "args_str: " << args_str;
-        LOG_MAIN_INFO << "======================";
+        LOG_MAIN_DEBUG << "======================";
+        LOG_MAIN_DEBUG << "header_size: " << header_size;
+        LOG_MAIN_DEBUG << "rpc_header_str: " << rpc_header_str;
+        LOG_MAIN_DEBUG << "service_name: " << service_name;
+        LOG_MAIN_DEBUG << "method_name: " << method_name;
+        LOG_MAIN_DEBUG << "args_str: " << args_str;
+        LOG_MAIN_DEBUG << "======================";
 
         /* 读取配置文件rpcserver的信息
-        */
+         */
 
         // rpc调用服务, 需要查询zookeeper上该服务的ip:port信息
         ZkClient zkCli;

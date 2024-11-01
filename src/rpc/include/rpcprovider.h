@@ -46,6 +46,8 @@ namespace star
 
         std::thread m_thread;
 
+        bool begin;
+
         // 新的socket连接回调
         void OnConnection(const muduo::net::TcpConnectionPtr &conn);
 

@@ -56,22 +56,23 @@ set(RPC_FILES
     ${CMAKE_SOURCE_DIR}/src/rpc/rpcheader.pb.cc
     ${CMAKE_SOURCE_DIR}/src/rpc/rpcprovider.cpp
     ${CMAKE_SOURCE_DIR}/src/rpc/zookeeperutil.cpp
+    ${CMAKE_SOURCE_DIR}/src/rpc/rpcchannel.cpp
 )
 
-add_executable(provier
-    ${CMAKE_SOURCE_DIR}/test/rpc/provider.cpp
-    ${RPC_FILES}
-)
+# add_executable(provier
+#     ${CMAKE_SOURCE_DIR}/test/rpc/provider.cpp
+#     ${RPC_FILES}
+# )
 
-target_link_libraries(provier 
-    ${PROTOBUF_LIBRARIES}
-    /usr/lib/x86_64-linux-gnu/libzookeeper_mt.a
-    pthread
-    ${CMAKE_SOURCE_DIR}/lib/libmuduo_net.a
-    ${CMAKE_SOURCE_DIR}/lib/libmuduo_base.a
-    ${CMAKE_SOURCE_DIR}/lib/libyaml-cpp.a
+# target_link_libraries(provier 
+#     ${PROTOBUF_LIBRARIES}
+#     /usr/lib/x86_64-linux-gnu/libzookeeper_mt.a
+#     pthread
+#     ${CMAKE_SOURCE_DIR}/lib/libmuduo_net.a
+#     ${CMAKE_SOURCE_DIR}/lib/libmuduo_base.a
+#     ${CMAKE_SOURCE_DIR}/lib/libyaml-cpp.a
     
-)
+# )
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/app)
 

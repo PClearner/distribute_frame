@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
+  "../app/CMakeLists.txt"
+  "../app/rpc/CMakeLists.txt"
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
@@ -48,6 +50,8 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "app/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "app/rpc/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -55,5 +59,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/log.dir/DependInfo.cmake"
   "CMakeFiles/inittest.dir/DependInfo.cmake"
   "CMakeFiles/protobuftest.dir/DependInfo.cmake"
-  "CMakeFiles/provier.dir/DependInfo.cmake"
+  "app/rpc/CMakeFiles/provider.dir/DependInfo.cmake"
+  "app/rpc/CMakeFiles/client.dir/DependInfo.cmake"
   )

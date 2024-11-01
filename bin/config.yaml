@@ -2,14 +2,14 @@ MainLogger:
   type: logger
   file: xxx
   model: all
-  level_threshold: INFO
+  level_threshold: DEBUG
 
 
 net:
   ip: 192.168.50.203
-  port: 8080
+  port: 8081
 
 zknet:
   ip: 192.168.50.203
-  port: 8090
+  port: 2181
 

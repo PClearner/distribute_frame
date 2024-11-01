@@ -12,28 +12,13 @@ namespace star
     public:
         static Rpcinit *GetInstance();
 
-        static void init(Rpcinit *m,std::string yamlfile = "");
+        static void init(Rpcinit *m, std::string yamlfile = "");
         static void rpcinit(std::string yamlfile = "");
         ~Rpcinit();
 
-        inline std::string get_ip()
+        inline std::string get_config(std::string key)
         {
-            return config_map["ip"];
-        }
-
-        inline std::string get_port()
-        {
-            return config_map["port"];
-        }
-
-        inline std::string get_zkip()
-        {
-            return config_map["zkip"];
-        }
-
-        inline std::string get_zkport()
-        {
-            return config_map["zkport"];
+            return config_map[key];
         }
 
     private:

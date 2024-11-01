@@ -248,13 +248,13 @@ Protobuf_PROTOC_LIBRARY_DEBUG:FILEPATH=Protobuf_PROTOC_LIBRARY_DEBUG-NOTFOUND
 Protobuf_PROTOC_LIBRARY_RELEASE:FILEPATH=Protobuf_PROTOC_LIBRARY_RELEASE-NOTFOUND
 
 //Value Computed by CMake
-distribute_frame_BINARY_DIR:STATIC=/home/star/workspace/distribution_frame/build/app
+distribute_frame_BINARY_DIR:STATIC=/home/star/workspace/distribution_frame/build
 
 //Value Computed by CMake
-distribute_frame_IS_TOP_LEVEL:STATIC=OFF
+distribute_frame_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-distribute_frame_SOURCE_DIR:STATIC=/home/star/workspace/distribution_frame/app
+distribute_frame_SOURCE_DIR:STATIC=/home/star/workspace/distribution_frame
 
 
 ########################
@@ -363,7 +363,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

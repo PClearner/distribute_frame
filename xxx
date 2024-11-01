@@ -1,0 +1,61 @@
+[INFO][2024-10-25 20:19:36] thread 138524265273856:Rpcinit over
+[DEBUG][2024-10-25 20:19:36] thread 138524265273856:provider create
+[DEBUG][2024-10-25 20:19:36] thread 138524265273856:provider set
+[DEBUG][2024-10-25 20:19:36] thread 138524265273856:provider init sucess
+[DEBUG][2024-10-25 20:19:36] thread 138524265273856:provider delete
+[DEBUG][2024-10-25 20:19:36] thread 138524244313664:server init over
+[INFO][2024-10-25 20:20:07] thread 138656644737536:Rpcinit over
+[DEBUG][2024-10-25 20:20:07] thread 138656644737536:provider create
+[DEBUG][2024-10-25 20:20:07] thread 138656644737536:provider set
+[DEBUG][2024-10-25 20:20:07] thread 138656644737536:provider init sucess
+[DEBUG][2024-10-25 20:20:07] thread 138656644737536:provider delete
+[DEBUG][2024-10-25 20:20:07] thread 138656620742208:server init over
+[INFO][2024-10-25 20:20:07] thread 138656620742208:zookeeper_init success!
+[INFO][2024-10-25 20:25:05] thread 125823867959808:Rpcinit over
+[DEBUG][2024-10-25 20:25:05] thread 125823867959808:provider create
+[DEBUG][2024-10-25 20:25:05] thread 125823867959808:provider set
+[DEBUG][2024-10-25 20:25:05] thread 125823867959808:provider init sucess
+[DEBUG][2024-10-25 20:25:05] thread 125823867959808:provider delete
+[DEBUG][2024-10-25 20:25:05] thread 125823843567168:server init over
+[INFO][2024-10-25 20:25:05] thread 125823843567168:zookeeper_init success!
+[INFO][2024-10-25 20:26:54] thread 138054200031744:Rpcinit over
+[DEBUG][2024-10-25 20:26:54] thread 138054200031744:provider create
+[DEBUG][2024-10-25 20:26:54] thread 138054200031744:provider set
+[DEBUG][2024-10-25 20:26:54] thread 138054200031744:provider init sucess
+[DEBUG][2024-10-25 20:26:54] thread 138054200031744:provider delete
+[DEBUG][2024-10-25 20:26:54] thread 138054176081472:server init over
+[INFO][2024-10-25 20:26:54] thread 138054176081472:zookeeper_init success!
+[INFO][2024-10-25 20:27:35] thread 124196553341440:Rpcinit over
+[DEBUG][2024-10-25 20:27:35] thread 124196553341440:provider create
+[DEBUG][2024-10-25 20:27:35] thread 124196553341440:provider set
+[DEBUG][2024-10-25 20:27:35] thread 124196553341440:provider init sucess
+[DEBUG][2024-10-25 20:27:35] thread 124196553341440:provider delete
+[DEBUG][2024-10-25 20:27:35] thread 124196529112640:server init over
+[INFO][2024-10-25 20:27:35] thread 124196529112640:zookeeper_init success!
+[INFO][2024-10-25 20:29:28] thread 138074959727104:Rpcinit over
+[DEBUG][2024-10-25 20:29:28] thread 138074959727104:provider create
+[DEBUG][2024-10-25 20:29:28] thread 138074959727104:provider set
+[DEBUG][2024-10-25 20:29:28] thread 138074959727104:provider init sucess
+[DEBUG][2024-10-25 20:29:28] thread 138074959727104:provider delete
+[DEBUG][2024-10-25 20:29:28] thread 138074935789120:server init over
+[INFO][2024-10-25 20:29:28] thread 138074935789120:zookeeper_init success!
+[INFO][2024-10-25 20:32:03] thread 124209329039872:Rpcinit over
+[DEBUG][2024-10-25 20:32:03] thread 124209329039872:provider create
+[DEBUG][2024-10-25 20:32:03] thread 124209329039872:provider set
+[DEBUG][2024-10-25 20:32:03] thread 124209329039872:provider init sucess
+[DEBUG][2024-10-25 20:32:03] thread 124209329039872:addservice
+[DEBUG][2024-10-25 20:32:03] thread 124209329039872:provider delete
+[DEBUG][2024-10-25 20:32:03] thread 124209304962624:server init over
+[INFO][2024-10-25 20:32:03] thread 124209304962624:zookeeper_init success!
+[INFO][2024-10-25 20:33:42] thread 140737353509376:Rpcinit over
+[DEBUG][2024-10-25 20:33:43] thread 140737353509376:provider create
+[DEBUG][2024-10-25 20:33:43] thread 140737353509376:provider set
+[DEBUG][2024-10-25 20:33:43] thread 140737353509376:provider init sucess
+[DEBUG][2024-10-25 20:33:43] thread 140737328973376:server init over
+[INFO][2024-10-25 20:33:52] thread 140737328973376:zookeeper_init success!
+[DEBUG][2024-10-25 20:33:52] thread 140737353509376:addservice
+[INFO][2024-10-25 20:33:57] thread 140737353509376:znode create successfully!
+[DEBUG][2024-10-25 20:33:57] thread 140737353509376:begin to input mp
+[INFO][2024-10-25 20:33:57] thread 140737353509376:znode create successfully!
+[INFO][2024-10-25 20:33:57] thread 140737353509376:znode create successfully!
+[DEBUG][2024-10-25 20:34:01] thread 140737353509376:provider delete

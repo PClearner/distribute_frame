@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option cc_generic_services=true;
+
+message args{
+    int32 arg1 = 1;
+    int32 arg2 = 2;
+}
+
+message results{
+    int32 res1 = 1;
+    bytes success = 2;
+}
+
+
+service Userservice{
+    rpc Add(args) returns(results);
+    rpc multi(args) returns(results);
+}

@@ -1,0 +1,15 @@
+MainLogger:
+  type: logger
+  file: xxx
+  model: all
+  level_threshold: DEBUG
+
+
+
+ip: 192.168.50.203
+port: 8080
+
+
+zkip: 192.168.50.203
+zkport: 2181
+

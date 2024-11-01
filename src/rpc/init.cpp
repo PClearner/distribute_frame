@@ -3,6 +3,12 @@
 namespace star
 {
 
+    Rpcinit *Rpcinit::GetInstance()
+    {
+        static Rpcinit *m_rpc = new Rpcinit();
+        return m_rpc;
+    }
+
     bool checkyaml(std::string file)
     {
         for (size_t i = 0; i < file.size(); i++)
@@ -32,74 +38,64 @@ namespace star
 
         YAML::Node config = YAML::LoadFile(yamlfile);
 
-        if (config["MainLogger"])
+        for (auto iter = config.begin(); iter != config.end(); iter++)
         {
-            getMainLogger()->set_file(config["MainLogger"]["file"].as<std::string>());
 
-            if (config["MainLogger"]["model"].as<std::string>() == "all")
+            if (iter->first.as<std::string>() == "MainLogger")
             {
-                getMainLogger()->set_model(Output::all);
-            }
-            else if (config["MainLogger"]["model"].as<std::string>() == "print")
-            {
-                getMainLogger()->set_model(Output::print);
-            }
-            else if (config["MainLogger"]["model"].as<std::string>() == "write")
-            {
-                getMainLogger()->set_model(Output::write);
+                getMainLogger()->set_file(config["MainLogger"]["file"].as<std::string>());
+
+                if (config["MainLogger"]["model"].as<std::string>() == "all")
+                {
+                    getMainLogger()->set_model(Output::all);
+                }
+                else if (config["MainLogger"]["model"].as<std::string>() == "print")
+                {
+                    getMainLogger()->set_model(Output::print);
+                }
+                else if (config["MainLogger"]["model"].as<std::string>() == "write")
+                {
+                    getMainLogger()->set_model(Output::write);
+                }
+                else
+                {
+                    LOG_MAIN_ERROR << "MainLogger model init error";
+                    assert("Rpc init error");
+                }
+
+                if (config["MainLogger"]["level_threshold"].as<std::string>() == "INFO")
+                {
+                    getMainLogger()->set_level_threshold(Logger::Level::Info);
+                }
+                else if (config["MainLogger"]["level_threshold"].as<std::string>() == "DEBUG")
+                {
+                    getMainLogger()->set_level_threshold(Logger::Level::Debug);
+                }
+                else if (config["MainLogger"]["level_threshold"].as<std::string>() == "ERROR")
+                {
+                    getMainLogger()->set_level_threshold(Logger::Level::Error);
+                }
+                else if (config["MainLogger"]["level_threshold"].as<std::string>() == "FATAL")
+                {
+                    getMainLogger()->set_level_threshold(Logger::Level::Fatal);
+                }
+                else
+                {
+                    LOG_MAIN_ERROR << "MainLogger level_threshold init error";
+                    assert("Rpc init error");
+                }
             }
             else
             {
-                LOG_MAIN_ERROR << "MainLogger model init error";
-                assert("Rpc init error");
-            }
-
-            if (config["MainLogger"]["level_threshold"].as<std::string>() == "INFO")
-            {
-                getMainLogger()->set_level_threshold(Logger::Level::Info);
-            }
-            else if (config["MainLogger"]["level_threshold"].as<std::string>() == "DEBUG")
-            {
-                getMainLogger()->set_level_threshold(Logger::Level::Debug);
-            }
-            else if (config["MainLogger"]["level_threshold"].as<std::string>() == "ERROR")
-            {
-                getMainLogger()->set_level_threshold(Logger::Level::Error);
-            }
-            else if (config["MainLogger"]["level_threshold"].as<std::string>() == "FATAL")
-            {
-                getMainLogger()->set_level_threshold(Logger::Level::Fatal);
-            }
-            else
-            {
-                LOG_MAIN_ERROR << "MainLogger level_threshold init error";
-                assert("Rpc init error");
+                Rpcinit::GetInstance()->config_map[iter->first.as<std::string>()] = iter->second.as<std::string>();
             }
         }
 
-        if (config["net"])
-        {
-            m->config_map["ip"] = config["net"]["ip"].as<std::string>();
-            m->config_map["port"] = config["net"]["port"].as<std::string>();
-        }
-
-        if (config["zknet"])
-        {
-            m->config_map["zkip"] = config["zknet"]["ip"].as<std::string>();
-            m->config_map["zkport"] = config["zknet"]["port"].as<std::string>();
-        }
-
-        LOG_MAIN_INFO << "Rpcinit over";
+        LOG_MAIN_DEBUG << "Rpcinit over";
         m->if_init = true;
     }
 
     Rpcinit::~Rpcinit() {}
-
-    Rpcinit *Rpcinit::GetInstance()
-    {
-        static Rpcinit* m_rpc = new Rpcinit();
-        return m_rpc;
-    }
 
     void Rpcinit::rpcinit(std::string yamlfile)
     {

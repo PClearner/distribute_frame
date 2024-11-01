@@ -1,12 +1,14 @@
 #include "rpc/include/rpcprovider.h"
+#include <unistd.h>
 
 namespace star
 {
 
     Rpcprovider::Rpcprovider()
     {
+        begin = false;
+
         m_serviceMap = std::make_shared<std::unordered_map<std::string, struct ServiceInfo>>();
-        m_eventLoop = std::make_shared<muduo::net::EventLoop>();
         zkCli = std::make_shared<ZkClient>();
 
         std::thread thread(Rpcprovider::run, this);
@@ -15,6 +17,7 @@ namespace star
 
     Rpcprovider::~Rpcprovider()
     {
+
         while (1)
         {
             if (m_thread.joinable())
@@ -27,43 +30,54 @@ namespace star
 
     void Rpcprovider::AddService(google::protobuf::Service *service)
     {
-
-        ServiceInfo info;
-        const google::protobuf::ServiceDescriptor *servicedesc = service->GetDescriptor();
-
-        std::string service_name = servicedesc->name();
-
-        int methodCnt = servicedesc->method_count();
-
-        for (int i = 0; i < methodCnt; ++i)
+        while (1)
         {
-            const google::protobuf::MethodDescriptor *Methodesc = servicedesc->method(i);
-            std::string method_name = Methodesc->name();
-            info.m_methodMap[method_name] = Methodesc;
-        }
+            if (begin)
+            {
+                ServiceInfo info;
+                const google::protobuf::ServiceDescriptor *servicedesc = service->GetDescriptor();
 
-        info.m_service = service;
-        m_serviceMap->insert({service_name, info});
+                std::string service_name = servicedesc->name();
 
-        std::string service_path = '/' + service_name;
-        zkCli->Create(service_path.c_str(), nullptr, 0);
+                int methodCnt = servicedesc->method_count();
 
-        for (auto &mp : info.m_methodMap)
-        {
-            // 找到method的路径: /service_name/method_name, 存储当前这个rpc结点的主机ip和port
-            std::string method_path = service_path + '/' + mp.first;
-            char method_path_data[128] = {0};
-            sprintf(method_path_data, "%s:%d", Rpcinit::GetInstance()->get_ip().c_str(), atoi(Rpcinit::GetInstance()->get_port().c_str()));
+                for (int i = 0; i < methodCnt; ++i)
+                {
+                    const google::protobuf::MethodDescriptor *Methodesc = servicedesc->method(i);
+                    std::string method_name = Methodesc->name();
+                    info.m_methodMap[method_name] = Methodesc;
+                }
 
-            // ZOO_EPHEERAL表示临时性结点
-            zkCli->Create(method_path.c_str(), method_path_data, strlen(method_path_data), ZOO_EPHEMERAL);
+                info.m_service = service;
+                m_serviceMap->insert({service_name, info});
+
+                std::string service_path = '/' + service_name;
+                zkCli->Create(service_path.c_str(), nullptr, 0);
+
+                for (auto &mp : info.m_methodMap)
+                {
+                    // 找到method的路径: /service_name/method_name, 存储当前这个rpc结点的主机ip和port
+                    std::string method_path = service_path + '/' + mp.first;
+                    char method_path_data[128] = {0};
+                    sprintf(method_path_data, "%s:%d", Rpcinit::GetInstance()->get_config("ip").c_str(), atoi(Rpcinit::GetInstance()->get_config("port").c_str()));
+
+                    // ZOO_EPHEERAL表示临时性结点
+                    zkCli->Create(method_path.c_str(), method_path_data, strlen(method_path_data), ZOO_EPHEMERAL);
+                }
+                break;
+            }
+            else
+            {
+                sleep(1);
+            }
         }
     }
 
     void Rpcprovider::run(Rpcprovider *pro)
     {
-        std::string ip = Rpcinit::GetInstance()->get_ip();
-        uint16_t port = atoi(Rpcinit::GetInstance()->get_port().c_str());
+        pro->m_eventLoop = std::make_shared<muduo::net::EventLoop>();
+        std::string ip = Rpcinit::GetInstance()->get_config("ip");
+        uint16_t port = atoi(Rpcinit::GetInstance()->get_config("port").c_str());
 
         muduo::net::InetAddress address(ip, port);
         muduo::net::TcpServer server(pro->m_eventLoop.get(), address, "RpcProvider");
@@ -75,6 +89,7 @@ namespace star
 
         server.setThreadNum(4);
         pro->zkCli->Start();
+        pro->begin = true;
         server.start();
         pro->m_eventLoop->loop();
     }
@@ -123,13 +138,13 @@ namespace star
         auto it = m_serviceMap->find(service_name);
         if (it == m_serviceMap->end())
         {
-            LOG_MAIN_INFO << "service: %s Not Found!", service_name.c_str();
+            LOG_MAIN_DEBUG << "service: %s Not Found!", service_name.c_str();
         }
 
         auto mit = it->second.m_methodMap.find(method_name);
         if (mit == it->second.m_methodMap.end())
         {
-            LOG_MAIN_INFO << "service: %s's method: %s Not Found!", service_name.c_str(), method_name.c_str();
+            LOG_MAIN_DEBUG << "service: %s's method: %s Not Found!", service_name.c_str(), method_name.c_str();
         }
 
         google::protobuf::Service *service = it->second.m_service;      // service对象

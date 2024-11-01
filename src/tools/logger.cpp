@@ -170,7 +170,6 @@ namespace star
             std::this_thread::sleep_for(std::chrono::milliseconds(10));
         }
 
-        std::cout << "restart new" << std::endl;
         std::thread thread(Logger::run, this);
         m_thread = std::move(thread);
     }

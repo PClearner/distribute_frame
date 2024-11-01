@@ -1,6 +1,11 @@
 /home/star/workspace/distribution_frame/build/CMakeFiles/log.dir
 /home/star/workspace/distribution_frame/build/CMakeFiles/inittest.dir
 /home/star/workspace/distribution_frame/build/CMakeFiles/protobuftest.dir
-/home/star/workspace/distribution_frame/build/CMakeFiles/provier.dir
 /home/star/workspace/distribution_frame/build/CMakeFiles/edit_cache.dir
 /home/star/workspace/distribution_frame/build/CMakeFiles/rebuild_cache.dir
+/home/star/workspace/distribution_frame/build/app/CMakeFiles/edit_cache.dir
+/home/star/workspace/distribution_frame/build/app/CMakeFiles/rebuild_cache.dir
+/home/star/workspace/distribution_frame/build/app/rpc/CMakeFiles/provider.dir
+/home/star/workspace/distribution_frame/build/app/rpc/CMakeFiles/client.dir
+/home/star/workspace/distribution_frame/build/app/rpc/CMakeFiles/edit_cache.dir
+/home/star/workspace/distribution_frame/build/app/rpc/CMakeFiles/rebuild_cache.dir
