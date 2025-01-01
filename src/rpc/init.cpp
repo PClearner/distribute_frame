@@ -3,6 +3,7 @@
 namespace star
 {
 
+
     Rpcinit *Rpcinit::GetInstance()
     {
         static Rpcinit *m_rpc = new Rpcinit();

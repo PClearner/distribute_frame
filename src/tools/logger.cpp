@@ -70,7 +70,7 @@ namespace star
         }
         str = format(str, level);
         {
-            m_mutex = std::make_shared<Locker>(new std::mutex());
+            Locker::ptr mtx = std::make_shared<Locker>(&obj->m_mutex);
             logqueue.push(str);
         }
     }
@@ -87,7 +87,7 @@ namespace star
 
             if (obj->m_model == Output::print)
             {
-                obj->m_mutex = std::make_shared<Locker>(new std::mutex());
+                Locker::ptr mtx = std::make_shared<Locker>(&obj->m_mutex);
                 std::cout << obj->logqueue.front() << std::endl;
                 obj->logqueue.pop();
             }
@@ -97,7 +97,7 @@ namespace star
                 std::string ss;
                 ss = obj->logqueue.front();
                 {
-                    obj->m_mutex = std::make_shared<Locker>(new std::mutex());
+                    Locker::ptr mtx = std::make_shared<Locker>(&obj->m_mutex);
                     obj->logqueue.pop();
                 }
                 obj->ofs.open(obj->m_file, std::ios::out | std::ios::app);
@@ -110,7 +110,7 @@ namespace star
                 std::string ss;
                 ss = obj->logqueue.front();
                 {
-                    obj->m_mutex = std::make_shared<Locker>(new std::mutex());
+                    Locker::ptr mtx = std::make_shared<Locker>(&obj->m_mutex);
                     std::cout << ss << std::endl;
                     obj->logqueue.pop();
                 }
@@ -123,7 +123,7 @@ namespace star
         {
             if (obj->m_model == Output::print)
             {
-                obj->m_mutex = std::make_shared<Locker>(new std::mutex());
+                Locker::ptr mtx = std::make_shared<Locker>(&obj->m_mutex);
                 std::cout << obj->logqueue.front() << std::endl;
                 obj->logqueue.pop();
             }
@@ -133,7 +133,7 @@ namespace star
                 std::string ss;
                 ss = obj->logqueue.front();
                 {
-                    obj->m_mutex = std::make_shared<Locker>(new std::mutex());
+                    Locker::ptr mtx = std::make_shared<Locker>(&obj->m_mutex);
                     obj->logqueue.pop();
                 }
                 obj->ofs.open(obj->m_file, std::ios::out | std::ios::app);
@@ -146,7 +146,7 @@ namespace star
                 std::string ss;
                 ss = obj->logqueue.front();
                 {
-                    obj->m_mutex = std::make_shared<Locker>(new std::mutex());
+                    Locker::ptr mtx = std::make_shared<Locker>(&obj->m_mutex);
                     std::cout << ss << std::endl;
                     obj->logqueue.pop();
                 }

@@ -6,6 +6,10 @@
 
 namespace star
 {
+    static std::string error_code()
+    {
+        return "error";
+    }
 
     class Rpcinit
     {
@@ -18,7 +22,15 @@ namespace star
 
         inline std::string get_config(std::string key)
         {
-            return config_map[key];
+            auto s = config_map.find(key);
+            if (s == config_map.end())
+            {
+                return error_code();
+            }
+            else
+            {
+                return s->second;
+            }
         }
 
     private:

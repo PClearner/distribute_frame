@@ -112,13 +112,8 @@ namespace star
         std::ofstream ofs;
         std::thread m_thread;
         std::atomic<bool> state;
-        Locker::ptr m_mutex;
+        std::mutex m_mutex;
     };
-
-
-
-
-
 
     class LoggerWrapper
     {
