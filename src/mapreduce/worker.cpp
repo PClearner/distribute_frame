@@ -2,9 +2,9 @@
 
 namespace star
 {
-    static int64_t mpsize = 0;
+    // static int64_t mpsize = 0;
 
-    std::string header_make(std::string input)
+    static std::string header_make(std::string input)
     {
         int32_t size = static_cast<int32_t>(input.size());
         std::string packet(sizeof(size) + input.size(), '\0');
@@ -92,11 +92,11 @@ namespace star
             // receive master request
             if (complete)
             {
-                conn->send(std::string("yes"));
+                conn->send(header_make(std::string(m_id + "yes")));
             }
             else
             {
-                conn->send(std::string("no"));
+                conn->send(header_make(std::string(m_id + "no")));
             }
         }
         else if (m_buffer == "master_over")
@@ -106,6 +106,14 @@ namespace star
         else if (m_buffer == "master_start")
         {
             over = false;
+            if (complete)
+            {
+                conn->send(header_make(std::string(m_id + "yes")));
+            }
+            else
+            {
+                conn->send(header_make(std::string(m_id + "no")));
+            }
         }
         else if (buf == "reduce")
         {
@@ -115,6 +123,7 @@ namespace star
             buf = m_buffer.substr(0, 7);
             if (message == "error")
             {
+                // need to resend
                 LOG_MAIN_DEBUG << m_buffer;
                 Locker::ptr mtx = std::make_shared<Locker>(&m_mtx);
                 std::vector<std::string> data = rc_data[buf];
@@ -151,12 +160,14 @@ namespace star
                 }
 
                 LOG_MAIN_DEBUG << buf << " error deal completely";
+                conn->send(header_make(std::string(m_id + "yes")));
             }
             else if (message == "ready")
             {
                 LOG_MAIN_DEBUG << m_buffer;
                 if (over)
                 {
+                    // master has no data to send,map need to send remaining data
                     Locker::ptr mtx = std::make_shared<Locker>(&m_mtx);
 
                     std::ofstream file(rc_log[buf]);
@@ -227,7 +238,6 @@ namespace star
                 {
                     it++;
                 }
-
                 it->second.push_back(res[index]);
             }
         }
@@ -313,29 +323,35 @@ namespace star
 
         if (m_buffer == "master_ok")
         {
+            if (m_data.empty())
+            {
+                conn->send(header_make(std::string(m_id + "over")));
+                conn->shutdown();
+                connection.erase("master");
+            }
             std::string stream;
             int index = 1;
             for (auto it = m_data.begin(); it != m_data.end(); it++)
             {
-                if (index % 10 == 0)
-                {
-                    conn->send(header_make(stream));
-                    stream.clear();
-                }
+                // if (index % 10 == 0)
+                // {
+                //     conn->send(header_make(stream));
+                //     stream.clear();
+                // }
 
                 stream = it->first + ":" + std::to_string(it->second) + "\n";
 
                 index++;
             }
             conn->send(header_make(stream));
+            m_data.clear();
             LOG_MAIN_DEBUG << "m_data send over";
         }
         else
         {
             LOG_MAIN_ERROR << "master_ok is not exist";
         }
-        conn->shutdown();
-        connection.erase("master");
+
     }
 
     void reduce::deal(const muduo::net::TcpConnectionPtr &conn)

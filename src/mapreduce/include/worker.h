@@ -57,6 +57,8 @@ namespace star
 
     class reduce : public work
     {
+
+    // not only has server,but also has client
     public:
         reduce(std::string id, std::function<std::unordered_map<std::string, uint64_t>(std::string)> m_func);
         ~reduce();
