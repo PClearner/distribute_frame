@@ -1,0 +1,28 @@
+MainLogger:
+  type: logger
+  file: xxx
+  model: all
+  level_threshold: DEBUG
+
+
+id: map1
+map1_ip: 192.168.50.203
+map1_port: 8080
+
+
+reduce_size: 2
+
+reduce1_ip: 192.168.50.203
+reduce1_port: 8091
+
+reduce2_ip: 192.168.50.203
+reduce2_port: 8092
+
+reduce1log: reducelog/1logmap1
+reduce2log: reducelog/2logmap1
+
+zkip: 192.168.50.203
+zkport: 2181
+
+
+

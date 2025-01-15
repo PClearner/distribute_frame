@@ -1,0 +1,14 @@
+MainLogger:
+  type: logger
+  file: xxx
+  model: all
+  level_threshold: DEBUG
+
+
+id : reduce2
+reduce2_ip: 192.168.50.203
+reduce2_port: 8092
+
+
+zkip: 192.168.50.203
+zkport: 2181

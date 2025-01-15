@@ -4,18 +4,41 @@ namespace star
 {
     // static int64_t mpsize = 0;
 
-    static std::string header_make(std::string input)
+    static std::string header_make(const std::string &input)
     {
         int32_t size = static_cast<int32_t>(input.size());
-        std::string packet(sizeof(size) + input.size(), '\0');
+        std::string packet;
+
+        // 将长度信息添加到字符串 (网络字节序)
+        size = htonl(size); // 转换为网络字节序（大端序）
+        packet.append(reinterpret_cast<const char *>(&size), sizeof(size));
+
+        // 添加实际数据
+        packet.append(input);
+
         return packet;
     }
 
-    void work::onConnection(const muduo::net::TcpConnectionPtr &conn)
+    void map::onConnection(const muduo::net::TcpConnectionPtr &conn)
     {
         if (conn->connected())
         {
             LOG_MAIN_DEBUG << conn->peerAddress().toIpPort() << " -> " << conn->localAddress().toIpPort() << "state:online";
+        }
+        else
+        {
+            LOG_MAIN_DEBUG << conn->peerAddress().toIpPort() << " -> " << conn->localAddress().toIpPort() << "state:offline";
+            conn->shutdown(); // 连接断开将socket资源释放
+            // 或者调用_loop->quit()退出epoll;
+        }
+    }
+
+    void reduce::onConnection(const muduo::net::TcpConnectionPtr &conn)
+    {
+        if (conn->connected())
+        {
+            LOG_MAIN_DEBUG << conn->peerAddress().toIpPort() << " -> " << conn->localAddress().toIpPort() << "state:online";
+            conn->send(header_make(m_id + "ready"));
         }
         else
         {
@@ -60,10 +83,10 @@ namespace star
         m_server->setThreadNum(4);
         m_zkclient.Start();
         std::string path_data = m_ip + ":" + m_port;
-        m_zkclient.Create(m_id.c_str(), path_data.c_str(), strlen(path_data.c_str()), ZOO_EPHEMERAL);
+        std::string service_path = '/' + m_id;
+        m_zkclient.Create(service_path.c_str(), path_data.c_str(), strlen(path_data.c_str()), ZOO_EPHEMERAL);
 
         u_int32_t reduce_size = static_cast<u_int32_t>(std::atoi(Rpcinit::GetInstance()->get_config("reduce_size").c_str()));
-        LOG_MAIN_DEBUG << "reduce size:" << reduce_size;
         for (u_int32_t i = 1; i <= reduce_size; i++)
         {
             std::string id = "reduce" + std::to_string(i);
@@ -119,8 +142,9 @@ namespace star
         {
             // "reduce1error"  from master
             // "reduce1ready"  from reduce1
-            std::string message = m_buffer.substr(8);
+            std::string message = m_buffer.substr(7);
             buf = m_buffer.substr(0, 7);
+            LOG_MAIN_DEBUG << m_buffer;
             if (message == "error")
             {
                 // need to resend
@@ -138,6 +162,7 @@ namespace star
                 }
 
                 std::ifstream file(rc_log[buf]);
+
                 if (!file)
                 {
                     LOG_MAIN_DEBUG << "rc_log file open error";
@@ -164,7 +189,7 @@ namespace star
             }
             else if (message == "ready")
             {
-                LOG_MAIN_DEBUG << m_buffer;
+
                 if (over)
                 {
                     // master has no data to send,map need to send remaining data
@@ -178,6 +203,7 @@ namespace star
                         file << rc_data[buf][i] << std::endl;
                     }
                     file.close();
+
                     if (sstream.size() == 0)
                     {
                         LOG_MAIN_DEBUG << "rc_data is empty,and it is over";
@@ -186,20 +212,27 @@ namespace star
                     }
                     else
                     {
-
                         conn->send(header_make(sstream));
-                        rc_data[buf] = std::vector<std::string>();
+                        rc_data[buf].clear();
                     }
                 }
                 else
                 {
                     Locker::ptr mtx = std::make_shared<Locker>(&m_mtx);
 
-                    std::ofstream file(rc_log[buf]);
+                    std::ofstream file(rc_log[buf], std::ios::app);
+
+                    if (!file.is_open())
+                    {
+                        std::cerr << "Failed to open file: " << rc_log[buf] << std::endl;
+                        return;
+                    }
+
                     std::string sstream;
                     for (int i = 0; i < rc_data[buf].size(); i++)
                     {
                         sstream = sstream + rc_data[buf][i];
+
                         file << rc_data[buf][i] << std::endl;
                     }
                     file.close();
@@ -212,7 +245,7 @@ namespace star
                     else
                     {
                         conn->send(header_make(sstream));
-                        rc_data[buf] = std::vector<std::string>();
+                        rc_data[buf].clear();
                     }
                     complete = true;
                 }
@@ -220,43 +253,44 @@ namespace star
             }
             else
             {
-                LOG_MAIN_DEBUG << "deal function unknown accident";
+                LOG_MAIN_DEBUG << "deal function unknown accident,message:" << message << ",buf:" << buf;
             }
         }
         else
         {
-            LOG_MAIN_DEBUG << "map work";
             complete = false;
             Locker::ptr mtx = std::make_shared<Locker>(&m_mtx);
             std::vector<std::string> res = m_func(m_buffer);
+
             for (int index = 0; index < res.size(); index++)
             {
                 size_t hashValue = std::hash<std::string>{}(res[index]);
-                int place = hashValue % rc_data.size();
+                int place = hashValue % rc_record.size();
+
                 auto it = rc_data.begin();
-                for (int i = 0; i <= place; i++)
+                for (int i = 0; i < place; i++)
                 {
                     it++;
                 }
                 it->second.push_back(res[index]);
             }
+            conn->send(header_make(std::string(m_id + "no")));
         }
         m_buffer.clear();
     }
 
     reduce::reduce(std::string id, std::function<std::unordered_map<std::string, uint64_t>(std::string)> m_func)
     {
+        m_zkclient.Start();
         set_reduce(m_func);
 
         m_loop = new muduo::net::EventLoop();
 
-        m_id = id;
-
         int index = 1;
         while (1)
         {
-            std::string map = "map" + std::to_string(index);
-            std::string host_data = m_zkclient.GetData(map);
+            std::string map = "/map" + std::to_string(index);
+            std::string host_data = m_zkclient.GetData(map.c_str());
 
             if (host_data == "")
             {
@@ -280,17 +314,19 @@ namespace star
             mapconnect->setConnectionCallback(std::bind(&reduce::onConnection, this, std::placeholders::_1));
             mapconnect->setMessageCallback(std::bind(&reduce::onMessage, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
 
-            LOG_MAIN_DEBUG << "add connection:" << map;
-            connection[map] = mapconnect;
+            std::string mapname = "map" + std::to_string(index);
+            connection[mapname] = mapconnect;
+
             index++;
         }
 
         m_id = id;
         m_ip = Rpcinit::GetInstance()->get_config(std::string(m_id + "_ip"));
         m_port = Rpcinit::GetInstance()->get_config(std::string(m_id + "_port"));
-        m_zkclient.Start();
+
         std::string path_data = m_ip + ":" + m_port;
-        m_zkclient.Create(m_id.c_str(), path_data.c_str(), strlen(path_data.c_str()), ZOO_EPHEMERAL);
+        std::string service_path = '/' + m_id;
+        m_zkclient.Create(service_path.c_str(), path_data.c_str(), strlen(path_data.c_str()), ZOO_EPHEMERAL);
 
         for (auto it = connection.begin(); it != connection.end(); it++)
         {
@@ -304,7 +340,6 @@ namespace star
         if (conn->connected())
         {
             LOG_MAIN_DEBUG << conn->peerAddress().toIpPort() << " -> " << conn->localAddress().toIpPort() << "state:online";
-            conn->send(header_make("start"));
         }
         else
         {
@@ -320,7 +355,6 @@ namespace star
         LOG_MAIN_DEBUG << "message size:" << size;
 
         m_buffer = buffer->retrieveAsString(size);
-
         if (m_buffer == "master_ok")
         {
             if (m_data.empty())
@@ -328,35 +362,26 @@ namespace star
                 conn->send(header_make(std::string(m_id + "over")));
                 conn->shutdown();
                 connection.erase("master");
+                return;
             }
             std::string stream;
-            int index = 1;
             for (auto it = m_data.begin(); it != m_data.end(); it++)
             {
-                // if (index % 10 == 0)
-                // {
-                //     conn->send(header_make(stream));
-                //     stream.clear();
-                // }
-
-                stream = it->first + ":" + std::to_string(it->second) + "\n";
-
-                index++;
+                stream += it->first + ":" + std::to_string(it->second) + "\n";
             }
             conn->send(header_make(stream));
             m_data.clear();
-            LOG_MAIN_DEBUG << "m_data send over";
         }
         else
         {
             LOG_MAIN_ERROR << "master_ok is not exist";
         }
-
     }
 
     void reduce::deal(const muduo::net::TcpConnectionPtr &conn)
     {
         std::string buf = m_buffer.substr(0, 4);
+        LOG_MAIN_DEBUG << "buf:" << buf << " m_buffer:" << m_buffer;
         if (connection.find(buf) != connection.end())
         {
             if (m_buffer == std::string(buf + "_over"))
@@ -369,7 +394,8 @@ namespace star
                 }
                 else
                 {
-                    std::string host_data = m_zkclient.GetData("master");
+                    std::string mastername = "/master";
+                    std::string host_data = m_zkclient.GetData(mastername.c_str());
 
                     if (host_data == "")
                     {
@@ -405,25 +431,27 @@ namespace star
                 std::this_thread::sleep_for(std::chrono::seconds(4));
                 conn->send(header_make(m_id + "ready"));
             }
-            else
-            {
-                over = false;
-                std::unordered_map<std::string, uint64_t> res = m_func(m_buffer);
-                for (auto it = res.begin(); it != res.end(); it++)
-                {
-                    if (m_data.find(it->first) != m_data.end())
-                    {
-                        m_data[it->first] = m_data[it->first] + it->second;
-                    }
-                    else
-                    {
-                        m_data[it->first] = it->second;
-                    }
-                }
-                conn->send(header_make(m_id + "ready"));
-            }
-            m_buffer.clear();
         }
+        else
+        {
+            LOG_MAIN_DEBUG << "deal map data";
+            over = false;
+            std::unordered_map<std::string, uint64_t> res = m_func(m_buffer);
+            for (auto it = res.begin(); it != res.end(); it++)
+            {
+                if (m_data.find(it->first) != m_data.end())
+                {
+                    m_data[it->first] = m_data[it->first] + it->second;
+                }
+                else
+                {
+                    m_data[it->first] = it->second;
+                }
+            }
+            conn->send(header_make(m_id + "ready"));
+            LOG_MAIN_DEBUG << m_id << " send ready";
+        }
+        m_buffer.clear();
     }
 
 }

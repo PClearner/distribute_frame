@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/client"
-  "../../../bin/client.pdb"
+  "../../../bin/rpc/client"
+  "../../../bin/rpc/client.pdb"
   "CMakeFiles/client.dir/__/__/src/rpc/init.cpp.o"
   "CMakeFiles/client.dir/__/__/src/rpc/init.cpp.o.d"
   "CMakeFiles/client.dir/__/__/src/rpc/rpcchannel.cpp.o"

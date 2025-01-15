@@ -85,15 +85,41 @@ clean: app/clean
 
 # Recursive "all" directory target.
 app/all: app/rpc/all
+app/all: app/mapreduce/all
 .PHONY : app/all
 
 # Recursive "preinstall" directory target.
 app/preinstall: app/rpc/preinstall
+app/preinstall: app/mapreduce/preinstall
 .PHONY : app/preinstall
 
 # Recursive "clean" directory target.
 app/clean: app/rpc/clean
+app/clean: app/mapreduce/clean
 .PHONY : app/clean
+
+#=============================================================================
+# Directory level rules for directory app/mapreduce
+
+# Recursive "all" directory target.
+app/mapreduce/all: app/mapreduce/CMakeFiles/map1.dir/all
+app/mapreduce/all: app/mapreduce/CMakeFiles/map2.dir/all
+app/mapreduce/all: app/mapreduce/CMakeFiles/reduce1.dir/all
+app/mapreduce/all: app/mapreduce/CMakeFiles/reduce2.dir/all
+app/mapreduce/all: app/mapreduce/CMakeFiles/master.dir/all
+.PHONY : app/mapreduce/all
+
+# Recursive "preinstall" directory target.
+app/mapreduce/preinstall:
+.PHONY : app/mapreduce/preinstall
+
+# Recursive "clean" directory target.
+app/mapreduce/clean: app/mapreduce/CMakeFiles/map1.dir/clean
+app/mapreduce/clean: app/mapreduce/CMakeFiles/map2.dir/clean
+app/mapreduce/clean: app/mapreduce/CMakeFiles/reduce1.dir/clean
+app/mapreduce/clean: app/mapreduce/CMakeFiles/reduce2.dir/clean
+app/mapreduce/clean: app/mapreduce/CMakeFiles/master.dir/clean
+.PHONY : app/mapreduce/clean
 
 #=============================================================================
 # Directory level rules for directory app/rpc
@@ -171,7 +197,7 @@ CMakeFiles/inittest.dir/clean:
 CMakeFiles/protobuftest.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuftest.dir/build.make CMakeFiles/protobuftest.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/protobuftest.dir/build.make CMakeFiles/protobuftest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=20,21,22 "Built target protobuftest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=41,42,43 "Built target protobuftest"
 .PHONY : CMakeFiles/protobuftest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -197,7 +223,7 @@ CMakeFiles/protobuftest.dir/clean:
 app/rpc/CMakeFiles/provider.dir/all:
 	$(MAKE) $(MAKESILENT) -f app/rpc/CMakeFiles/provider.dir/build.make app/rpc/CMakeFiles/provider.dir/depend
 	$(MAKE) $(MAKESILENT) -f app/rpc/CMakeFiles/provider.dir/build.make app/rpc/CMakeFiles/provider.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32 "Built target provider"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=44,45,46,47,48,49,50,51,52,53 "Built target provider"
 .PHONY : app/rpc/CMakeFiles/provider.dir/all
 
 # Build rule for subdir invocation for target.
@@ -241,6 +267,136 @@ client: app/rpc/CMakeFiles/client.dir/rule
 app/rpc/CMakeFiles/client.dir/clean:
 	$(MAKE) $(MAKESILENT) -f app/rpc/CMakeFiles/client.dir/build.make app/rpc/CMakeFiles/client.dir/clean
 .PHONY : app/rpc/CMakeFiles/client.dir/clean
+
+#=============================================================================
+# Target rules for target app/mapreduce/CMakeFiles/map1.dir
+
+# All Build rule for target.
+app/mapreduce/CMakeFiles/map1.dir/all:
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/map1.dir/build.make app/mapreduce/CMakeFiles/map1.dir/depend
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/map1.dir/build.make app/mapreduce/CMakeFiles/map1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=20,21,22,23,24,25,26 "Built target map1"
+.PHONY : app/mapreduce/CMakeFiles/map1.dir/all
+
+# Build rule for subdir invocation for target.
+app/mapreduce/CMakeFiles/map1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/mapreduce/CMakeFiles/map1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 0
+.PHONY : app/mapreduce/CMakeFiles/map1.dir/rule
+
+# Convenience name for target.
+map1: app/mapreduce/CMakeFiles/map1.dir/rule
+.PHONY : map1
+
+# clean rule for target.
+app/mapreduce/CMakeFiles/map1.dir/clean:
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/map1.dir/build.make app/mapreduce/CMakeFiles/map1.dir/clean
+.PHONY : app/mapreduce/CMakeFiles/map1.dir/clean
+
+#=============================================================================
+# Target rules for target app/mapreduce/CMakeFiles/map2.dir
+
+# All Build rule for target.
+app/mapreduce/CMakeFiles/map2.dir/all:
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/map2.dir/build.make app/mapreduce/CMakeFiles/map2.dir/depend
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/map2.dir/build.make app/mapreduce/CMakeFiles/map2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=27,28,29,30,31,32,33 "Built target map2"
+.PHONY : app/mapreduce/CMakeFiles/map2.dir/all
+
+# Build rule for subdir invocation for target.
+app/mapreduce/CMakeFiles/map2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/mapreduce/CMakeFiles/map2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 0
+.PHONY : app/mapreduce/CMakeFiles/map2.dir/rule
+
+# Convenience name for target.
+map2: app/mapreduce/CMakeFiles/map2.dir/rule
+.PHONY : map2
+
+# clean rule for target.
+app/mapreduce/CMakeFiles/map2.dir/clean:
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/map2.dir/build.make app/mapreduce/CMakeFiles/map2.dir/clean
+.PHONY : app/mapreduce/CMakeFiles/map2.dir/clean
+
+#=============================================================================
+# Target rules for target app/mapreduce/CMakeFiles/reduce1.dir
+
+# All Build rule for target.
+app/mapreduce/CMakeFiles/reduce1.dir/all:
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/reduce1.dir/build.make app/mapreduce/CMakeFiles/reduce1.dir/depend
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/reduce1.dir/build.make app/mapreduce/CMakeFiles/reduce1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=54,55,56,57,58,59,60 "Built target reduce1"
+.PHONY : app/mapreduce/CMakeFiles/reduce1.dir/all
+
+# Build rule for subdir invocation for target.
+app/mapreduce/CMakeFiles/reduce1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/mapreduce/CMakeFiles/reduce1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 0
+.PHONY : app/mapreduce/CMakeFiles/reduce1.dir/rule
+
+# Convenience name for target.
+reduce1: app/mapreduce/CMakeFiles/reduce1.dir/rule
+.PHONY : reduce1
+
+# clean rule for target.
+app/mapreduce/CMakeFiles/reduce1.dir/clean:
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/reduce1.dir/build.make app/mapreduce/CMakeFiles/reduce1.dir/clean
+.PHONY : app/mapreduce/CMakeFiles/reduce1.dir/clean
+
+#=============================================================================
+# Target rules for target app/mapreduce/CMakeFiles/reduce2.dir
+
+# All Build rule for target.
+app/mapreduce/CMakeFiles/reduce2.dir/all:
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/reduce2.dir/build.make app/mapreduce/CMakeFiles/reduce2.dir/depend
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/reduce2.dir/build.make app/mapreduce/CMakeFiles/reduce2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=61,62,63,64,65,66,67 "Built target reduce2"
+.PHONY : app/mapreduce/CMakeFiles/reduce2.dir/all
+
+# Build rule for subdir invocation for target.
+app/mapreduce/CMakeFiles/reduce2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/mapreduce/CMakeFiles/reduce2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 0
+.PHONY : app/mapreduce/CMakeFiles/reduce2.dir/rule
+
+# Convenience name for target.
+reduce2: app/mapreduce/CMakeFiles/reduce2.dir/rule
+.PHONY : reduce2
+
+# clean rule for target.
+app/mapreduce/CMakeFiles/reduce2.dir/clean:
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/reduce2.dir/build.make app/mapreduce/CMakeFiles/reduce2.dir/clean
+.PHONY : app/mapreduce/CMakeFiles/reduce2.dir/clean
+
+#=============================================================================
+# Target rules for target app/mapreduce/CMakeFiles/master.dir
+
+# All Build rule for target.
+app/mapreduce/CMakeFiles/master.dir/all:
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/master.dir/build.make app/mapreduce/CMakeFiles/master.dir/depend
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/master.dir/build.make app/mapreduce/CMakeFiles/master.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/star/workspace/distribution_frame/build/CMakeFiles --progress-num=34,35,36,37,38,39,40 "Built target master"
+.PHONY : app/mapreduce/CMakeFiles/master.dir/all
+
+# Build rule for subdir invocation for target.
+app/mapreduce/CMakeFiles/master.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/mapreduce/CMakeFiles/master.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/star/workspace/distribution_frame/build/CMakeFiles 0
+.PHONY : app/mapreduce/CMakeFiles/master.dir/rule
+
+# Convenience name for target.
+master: app/mapreduce/CMakeFiles/master.dir/rule
+.PHONY : master
+
+# clean rule for target.
+app/mapreduce/CMakeFiles/master.dir/clean:
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/master.dir/build.make app/mapreduce/CMakeFiles/master.dir/clean
+.PHONY : app/mapreduce/CMakeFiles/master.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -77,6 +77,10 @@ namespace star
                 exit(EXIT_FAILURE);
             }
         }
+        else
+        {
+            LOG_MAIN_ERROR << "flag:" << flag << "  ZNONODE:" << ZNONODE;
+        }
     }
 
     // 传入参数指定结点的路径, 获取znode结点的值
@@ -85,7 +89,6 @@ namespace star
         char buffer[64];
         int bufferlen = sizeof(buffer);
         int flag = zoo_get(m_zhandle, path, 0, buffer, &bufferlen, nullptr);
-
         if (flag != ZOK)
         {
             LOG_MAIN_ERROR << "get znode data error!\n"

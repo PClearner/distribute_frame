@@ -9,6 +9,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
   "../app/CMakeLists.txt"
+  "../app/mapreduce/CMakeLists.txt"
   "../app/rpc/CMakeLists.txt"
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
@@ -128,6 +129,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "app/CMakeFiles/CMakeDirectoryInformation.cmake"
   "app/rpc/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "app/mapreduce/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -137,4 +139,9 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/protobuftest.dir/DependInfo.cmake"
   "app/rpc/CMakeFiles/provider.dir/DependInfo.cmake"
   "app/rpc/CMakeFiles/client.dir/DependInfo.cmake"
+  "app/mapreduce/CMakeFiles/map1.dir/DependInfo.cmake"
+  "app/mapreduce/CMakeFiles/map2.dir/DependInfo.cmake"
+  "app/mapreduce/CMakeFiles/reduce1.dir/DependInfo.cmake"
+  "app/mapreduce/CMakeFiles/reduce2.dir/DependInfo.cmake"
+  "app/mapreduce/CMakeFiles/master.dir/DependInfo.cmake"
   )

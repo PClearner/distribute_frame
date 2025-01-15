@@ -70,7 +70,7 @@ namespace star
         }
         str = format(str, level);
         {
-            Locker::ptr mtx = std::make_shared<Locker>(&obj->m_mutex);
+            Locker::ptr mtx = std::make_shared<Locker>(&(this->m_mutex));
             logqueue.push(str);
         }
     }

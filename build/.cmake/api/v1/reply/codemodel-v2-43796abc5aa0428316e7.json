@@ -1,0 +1,192 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						6
+					]
+				},
+				{
+					"build" : "app",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"jsonFile" : "directory-app-Debug-94c5f210ca04b1028ae5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "app"
+				},
+				{
+					"build" : "app/rpc",
+					"jsonFile" : "directory-app.rpc-Debug-8ac62357d0a2dc870c52.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "app/rpc",
+					"targetIndexes" : 
+					[
+						0,
+						7
+					]
+				},
+				{
+					"build" : "app/mapreduce",
+					"jsonFile" : "directory-app.mapreduce-Debug-aedfb537d6bca78972ef.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "app/mapreduce",
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						5,
+						8,
+						9
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					],
+					"name" : "distribute_frame",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "client::@fa92f56d5f8bada80cde",
+					"jsonFile" : "target-client-Debug-eb7bd797f9adc4174b2d.json",
+					"name" : "client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "inittest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-inittest-Debug-fffd9d4dc6a023d57b92.json",
+					"name" : "inittest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "log::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-log-Debug-9bc9b5c0bf50c2575dcf.json",
+					"name" : "log",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "map1::@f1bedd0f1fa6671bdf37",
+					"jsonFile" : "target-map1-Debug-bd239827be985d5ac931.json",
+					"name" : "map1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "map2::@f1bedd0f1fa6671bdf37",
+					"jsonFile" : "target-map2-Debug-19329d62aef9b6a6e6d4.json",
+					"name" : "map2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "master::@f1bedd0f1fa6671bdf37",
+					"jsonFile" : "target-master-Debug-95e536684046d4546d67.json",
+					"name" : "master",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "protobuftest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-protobuftest-Debug-c65ad4939aaad8e9a0ec.json",
+					"name" : "protobuftest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "provider::@fa92f56d5f8bada80cde",
+					"jsonFile" : "target-provider-Debug-ad72b946d105fceb14ea.json",
+					"name" : "provider",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "reduce1::@f1bedd0f1fa6671bdf37",
+					"jsonFile" : "target-reduce1-Debug-4c2e6a75701003d038e0.json",
+					"name" : "reduce1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "reduce2::@f1bedd0f1fa6671bdf37",
+					"jsonFile" : "target-reduce2-Debug-397c7175d25716046c37.json",
+					"name" : "reduce2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/star/workspace/distribution_frame/build",
+		"source" : "/home/star/workspace/distribution_frame"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -2,9 +2,9 @@
 
 #include "rpc/include/init.h"
 #include "rpc/include/zookeeperutil.h"
-#include "include/muduo/net/TcpServer.h"
-#include "include/muduo/net/TcpClient.h"
-#include "include/muduo/net/EventLoop.h"
+#include "muduo/net/TcpServer.h"
+#include "muduo/net/TcpClient.h"
+#include "muduo/net/EventLoop.h"
 #include <functional>
 #include <tuple>
 
@@ -15,13 +15,14 @@ namespace star
     class default_cut
     {
     public:
-        default_cut(uint64_t volum = 2000)
+        default_cut(uint64_t volum = 500)
         {
             m_volum = volum;
         }
 
         virtual std::string cut(std::string file_path)
         {
+            LOG_MAIN_DEBUG << "cut start";
             std::string line;
             std::ifstream file(file_path);
             std::string res;
@@ -52,7 +53,7 @@ namespace star
     class master
     {
     public:
-        master(std::string outfile, default_cut *cut_method = nullptr);
+        master(std::vector<std::string> inputfiles, default_cut *cut_method = nullptr);
         ~master();
 
         void work();
@@ -73,6 +74,8 @@ namespace star
         muduo::net::TcpServer *m_server;
         ZkClient m_zkclient;
         std::string m_buffer;
+        std::string reducebuffer;
+        std::string reduceport;
         std::unordered_map<std::string, muduo::net::TcpClient *> connection;
 
         std::thread *reduce_check;
@@ -92,6 +95,8 @@ namespace star
         std::string m_outfile;
 
         bool over = false;
+        bool receive_over = false;
+        std::unordered_map<std::string, bool> reduceresult;
     };
 
 }

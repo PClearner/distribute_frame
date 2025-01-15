@@ -181,6 +181,71 @@ client/fast:
 	$(MAKE) $(MAKESILENT) -f app/rpc/CMakeFiles/client.dir/build.make app/rpc/CMakeFiles/client.dir/build
 .PHONY : client/fast
 
+#=============================================================================
+# Target rules for targets named map1
+
+# Build rule for target.
+map1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 map1
+.PHONY : map1
+
+# fast build rule for target.
+map1/fast:
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/map1.dir/build.make app/mapreduce/CMakeFiles/map1.dir/build
+.PHONY : map1/fast
+
+#=============================================================================
+# Target rules for targets named map2
+
+# Build rule for target.
+map2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 map2
+.PHONY : map2
+
+# fast build rule for target.
+map2/fast:
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/map2.dir/build.make app/mapreduce/CMakeFiles/map2.dir/build
+.PHONY : map2/fast
+
+#=============================================================================
+# Target rules for targets named reduce1
+
+# Build rule for target.
+reduce1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce1
+.PHONY : reduce1
+
+# fast build rule for target.
+reduce1/fast:
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/reduce1.dir/build.make app/mapreduce/CMakeFiles/reduce1.dir/build
+.PHONY : reduce1/fast
+
+#=============================================================================
+# Target rules for targets named reduce2
+
+# Build rule for target.
+reduce2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce2
+.PHONY : reduce2
+
+# fast build rule for target.
+reduce2/fast:
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/reduce2.dir/build.make app/mapreduce/CMakeFiles/reduce2.dir/build
+.PHONY : reduce2/fast
+
+#=============================================================================
+# Target rules for targets named master
+
+# Build rule for target.
+master: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 master
+.PHONY : master
+
+# fast build rule for target.
+master/fast:
+	$(MAKE) $(MAKESILENT) -f app/mapreduce/CMakeFiles/master.dir/build.make app/mapreduce/CMakeFiles/master.dir/build
+.PHONY : master/fast
+
 app/tools/logmain.o: app/tools/logmain.cpp.o
 .PHONY : app/tools/logmain.o
 
@@ -366,8 +431,13 @@ help:
 	@echo "... client"
 	@echo "... inittest"
 	@echo "... log"
+	@echo "... map1"
+	@echo "... map2"
+	@echo "... master"
 	@echo "... protobuftest"
 	@echo "... provider"
+	@echo "... reduce1"
+	@echo "... reduce2"
 	@echo "... app/tools/logmain.o"
 	@echo "... app/tools/logmain.i"
 	@echo "... app/tools/logmain.s"

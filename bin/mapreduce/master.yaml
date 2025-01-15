@@ -1,0 +1,22 @@
+MainLogger:
+  type: logger
+  file: xxx
+  model: all
+  level_threshold: DEBUG
+
+
+infile1: Jane_Eyre.txt
+
+outfile: result.txt
+
+
+master_ip: 192.168.50.203
+master_port: 8071
+
+
+
+zkip: 192.168.50.203
+zkport: 2181
+
+
+

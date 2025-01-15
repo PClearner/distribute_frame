@@ -9,3 +9,10 @@
 /home/star/workspace/distribution_frame/build/app/rpc/CMakeFiles/client.dir
 /home/star/workspace/distribution_frame/build/app/rpc/CMakeFiles/edit_cache.dir
 /home/star/workspace/distribution_frame/build/app/rpc/CMakeFiles/rebuild_cache.dir
+/home/star/workspace/distribution_frame/build/app/mapreduce/CMakeFiles/map1.dir
+/home/star/workspace/distribution_frame/build/app/mapreduce/CMakeFiles/map2.dir
+/home/star/workspace/distribution_frame/build/app/mapreduce/CMakeFiles/reduce1.dir
+/home/star/workspace/distribution_frame/build/app/mapreduce/CMakeFiles/reduce2.dir
+/home/star/workspace/distribution_frame/build/app/mapreduce/CMakeFiles/master.dir
+/home/star/workspace/distribution_frame/build/app/mapreduce/CMakeFiles/edit_cache.dir
+/home/star/workspace/distribution_frame/build/app/mapreduce/CMakeFiles/rebuild_cache.dir

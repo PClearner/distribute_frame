@@ -133,5 +133,155 @@
   "directory": "/home/star/workspace/distribution_frame/build/app/rpc",
   "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -I/home/star/workspace/distribution_frame/app -g -std=gnu++11 -o CMakeFiles/client.dir/userservice.pb.cc.o -c /home/star/workspace/distribution_frame/app/rpc/userservice.pb.cc",
   "file": "/home/star/workspace/distribution_frame/app/rpc/userservice.pb.cc"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/map1.dir/__/__/src/tools/lock.cpp.o -c /home/star/workspace/distribution_frame/src/tools/lock.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/tools/lock.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/map1.dir/__/__/src/tools/logger.cpp.o -c /home/star/workspace/distribution_frame/src/tools/logger.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/tools/logger.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/map1.dir/__/__/src/rpc/init.cpp.o -c /home/star/workspace/distribution_frame/src/rpc/init.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/rpc/init.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/map1.dir/__/__/src/rpc/zookeeperutil.cpp.o -c /home/star/workspace/distribution_frame/src/rpc/zookeeperutil.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/rpc/zookeeperutil.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/map1.dir/__/__/src/mapreduce/worker.cpp.o -c /home/star/workspace/distribution_frame/src/mapreduce/worker.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/mapreduce/worker.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/map1.dir/map1_test.cpp.o -c /home/star/workspace/distribution_frame/app/mapreduce/map1_test.cpp",
+  "file": "/home/star/workspace/distribution_frame/app/mapreduce/map1_test.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/map2.dir/__/__/src/tools/lock.cpp.o -c /home/star/workspace/distribution_frame/src/tools/lock.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/tools/lock.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/map2.dir/__/__/src/tools/logger.cpp.o -c /home/star/workspace/distribution_frame/src/tools/logger.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/tools/logger.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/map2.dir/__/__/src/rpc/init.cpp.o -c /home/star/workspace/distribution_frame/src/rpc/init.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/rpc/init.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/map2.dir/__/__/src/rpc/zookeeperutil.cpp.o -c /home/star/workspace/distribution_frame/src/rpc/zookeeperutil.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/rpc/zookeeperutil.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/map2.dir/__/__/src/mapreduce/worker.cpp.o -c /home/star/workspace/distribution_frame/src/mapreduce/worker.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/mapreduce/worker.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/map2.dir/map2_test.cpp.o -c /home/star/workspace/distribution_frame/app/mapreduce/map2_test.cpp",
+  "file": "/home/star/workspace/distribution_frame/app/mapreduce/map2_test.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/reduce1.dir/__/__/src/tools/lock.cpp.o -c /home/star/workspace/distribution_frame/src/tools/lock.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/tools/lock.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/reduce1.dir/__/__/src/tools/logger.cpp.o -c /home/star/workspace/distribution_frame/src/tools/logger.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/tools/logger.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/reduce1.dir/__/__/src/rpc/init.cpp.o -c /home/star/workspace/distribution_frame/src/rpc/init.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/rpc/init.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/reduce1.dir/__/__/src/rpc/zookeeperutil.cpp.o -c /home/star/workspace/distribution_frame/src/rpc/zookeeperutil.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/rpc/zookeeperutil.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/reduce1.dir/__/__/src/mapreduce/worker.cpp.o -c /home/star/workspace/distribution_frame/src/mapreduce/worker.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/mapreduce/worker.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/reduce1.dir/reduce1_test.cpp.o -c /home/star/workspace/distribution_frame/app/mapreduce/reduce1_test.cpp",
+  "file": "/home/star/workspace/distribution_frame/app/mapreduce/reduce1_test.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/reduce2.dir/__/__/src/tools/lock.cpp.o -c /home/star/workspace/distribution_frame/src/tools/lock.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/tools/lock.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/reduce2.dir/__/__/src/tools/logger.cpp.o -c /home/star/workspace/distribution_frame/src/tools/logger.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/tools/logger.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/reduce2.dir/__/__/src/rpc/init.cpp.o -c /home/star/workspace/distribution_frame/src/rpc/init.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/rpc/init.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/reduce2.dir/__/__/src/rpc/zookeeperutil.cpp.o -c /home/star/workspace/distribution_frame/src/rpc/zookeeperutil.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/rpc/zookeeperutil.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/reduce2.dir/__/__/src/mapreduce/worker.cpp.o -c /home/star/workspace/distribution_frame/src/mapreduce/worker.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/mapreduce/worker.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -std=gnu++11 -o CMakeFiles/reduce2.dir/reduce2_test.cpp.o -c /home/star/workspace/distribution_frame/app/mapreduce/reduce2_test.cpp",
+  "file": "/home/star/workspace/distribution_frame/app/mapreduce/reduce2_test.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -g -O0 -std=gnu++11 -o CMakeFiles/master.dir/__/__/src/tools/lock.cpp.o -c /home/star/workspace/distribution_frame/src/tools/lock.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/tools/lock.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -g -O0 -std=gnu++11 -o CMakeFiles/master.dir/__/__/src/tools/logger.cpp.o -c /home/star/workspace/distribution_frame/src/tools/logger.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/tools/logger.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -g -O0 -std=gnu++11 -o CMakeFiles/master.dir/__/__/src/rpc/init.cpp.o -c /home/star/workspace/distribution_frame/src/rpc/init.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/rpc/init.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -g -O0 -std=gnu++11 -o CMakeFiles/master.dir/__/__/src/rpc/zookeeperutil.cpp.o -c /home/star/workspace/distribution_frame/src/rpc/zookeeperutil.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/rpc/zookeeperutil.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -g -O0 -std=gnu++11 -o CMakeFiles/master.dir/__/__/src/mapreduce/master.cpp.o -c /home/star/workspace/distribution_frame/src/mapreduce/master.cpp",
+  "file": "/home/star/workspace/distribution_frame/src/mapreduce/master.cpp"
+},
+{
+  "directory": "/home/star/workspace/distribution_frame/build/app/mapreduce",
+  "command": "/usr/bin/c++  -I/home/star/workspace/distribution_frame/include -I/home/star/workspace/distribution_frame/src -g -g -O0 -std=gnu++11 -o CMakeFiles/master.dir/master_test.cpp.o -c /home/star/workspace/distribution_frame/app/mapreduce/master_test.cpp",
+  "file": "/home/star/workspace/distribution_frame/app/mapreduce/master_test.cpp"
 }
 ]

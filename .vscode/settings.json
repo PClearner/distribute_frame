@@ -76,6 +76,7 @@
         "source_location": "cpp",
         "future": "cpp",
         "iomanip": "cpp",
-        "cfenv": "cpp"
+        "cfenv": "cpp",
+        "*.ipp": "cpp"
     }
 }

@@ -2,9 +2,13 @@
 
 #include "rpc/include/init.h"
 #include "rpc/include/zookeeperutil.h"
-#include "include/muduo/net/TcpServer.h"
-#include "include/muduo/net/TcpClient.h"
-#include "include/muduo/net/EventLoop.h"
+
+#include "muduo/net/TcpServer.h"
+#include "muduo/net/EventLoop.h"
+#include "muduo/net/InetAddress.h"
+#include "muduo/net/TcpConnection.h"
+#include "muduo/net/TcpClient.h"
+
 #include <functional>
 #include <tuple>
 
@@ -14,25 +18,24 @@ namespace star
     class work
     {
     public:
-        work();
-        ~work();
+        work() {}
+        ~work() {}
         virtual void deal(const muduo::net::TcpConnectionPtr &conn) {}
 
+        void onMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net::Buffer *buffer, muduo::Timestamp time);
         muduo::net::EventLoop *m_loop;
         ZkClient m_zkclient;
         std::string m_buffer;
         std::string m_ip;
         std::string m_port;
-
-        void onConnection(const muduo::net::TcpConnectionPtr &conn);
-        void onMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net::Buffer *buffer, muduo::Timestamp time);
+        std::string m_id;
     };
 
     class map : public work
     {
     public:
         map(std::string id, std::function<std::vector<std::string>(std::string)> func);
-        ~map();
+        ~map() {}
 
         void deal(const muduo::net::TcpConnectionPtr &conn) override;
 
@@ -40,6 +43,8 @@ namespace star
         {
             m_func = func;
         }
+
+        void onConnection(const muduo::net::TcpConnectionPtr &conn);
 
     private:
         std::function<std::vector<std::string>(std::string)> m_func;
@@ -49,7 +54,6 @@ namespace star
         std::unordered_map<std::string, std::string> rc_log;
 
         std::mutex m_mtx;
-        std::string m_id;
         muduo::net::TcpServer *m_server;
         bool complete = false;
         bool over = false;
@@ -58,10 +62,10 @@ namespace star
     class reduce : public work
     {
 
-    // not only has server,but also has client
+        // not only has server,but also has client
     public:
         reduce(std::string id, std::function<std::unordered_map<std::string, uint64_t>(std::string)> m_func);
-        ~reduce();
+        ~reduce() {}
 
         void deal(const muduo::net::TcpConnectionPtr &conn) override;
 
@@ -69,6 +73,8 @@ namespace star
         {
             m_func = func;
         }
+
+        void onConnection(const muduo::net::TcpConnectionPtr &conn);
 
         void masteronConnection(const muduo::net::TcpConnectionPtr &conn);
         void masteronMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net::Buffer *buffer, muduo::Timestamp time);
@@ -81,7 +87,6 @@ namespace star
         bool over = false;
 
         std::mutex m_mtx;
-        std::string m_id;
     };
 
 }
