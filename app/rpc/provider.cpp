@@ -54,7 +54,7 @@ public:
 int main()
 {
     std::cout << "run" << std::endl;
-    star::Rpcinit::rpcinit("config.yaml");
+    star::Rpcinit::rpcinit("config1.yaml");
     star::Rpcprovider mm;
     LOG_MAIN_DEBUG << "addservice";
     std::cout << "run in 59" << std::endl;

@@ -5,7 +5,7 @@
 
 int main()
 {
-    star::Rpcinit::rpcinit("config.yaml");
+    star::Rpcinit::rpcinit("config2.yaml");
 
     Userservice_Stub stub(new star::rpcChannel());
 
