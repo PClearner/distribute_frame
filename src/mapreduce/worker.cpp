@@ -53,9 +53,9 @@ namespace star
         int64_t size = buffer->readInt32();
         LOG_MAIN_DEBUG << "message size:" << size;
 
-        m_buffer = buffer->retrieveAsString(size);
+        std::string m_buffer = buffer->retrieveAsString(size);
 
-        deal(conn);
+        deal(conn, m_buffer);
     }
 
     map::map(std::string id, std::function<std::vector<std::string>(std::string)> func)
@@ -107,7 +107,7 @@ namespace star
         m_loop->loop();
     }
 
-    void map::deal(const muduo::net::TcpConnectionPtr &conn)
+    void map::deal(const muduo::net::TcpConnectionPtr &conn, std::string &m_buffer)
     {
         std::string buf = m_buffer.substr(0, 6);
         if (m_buffer == "master_ack")
@@ -354,7 +354,7 @@ namespace star
         int64_t size = buffer->readInt32();
         LOG_MAIN_DEBUG << "message size:" << size;
 
-        m_buffer = buffer->retrieveAsString(size);
+        std::string m_buffer = buffer->retrieveAsString(size);
         if (m_buffer == "master_ok")
         {
             if (m_data.empty())
@@ -378,7 +378,7 @@ namespace star
         }
     }
 
-    void reduce::deal(const muduo::net::TcpConnectionPtr &conn)
+    void reduce::deal(const muduo::net::TcpConnectionPtr &conn, std::string &m_buffer)
     {
         std::string buf = m_buffer.substr(0, 4);
         LOG_MAIN_DEBUG << "buf:" << buf << " m_buffer:" << m_buffer;

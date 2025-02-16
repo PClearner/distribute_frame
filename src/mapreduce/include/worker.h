@@ -20,12 +20,12 @@ namespace star
     public:
         work() {}
         ~work() {}
-        virtual void deal(const muduo::net::TcpConnectionPtr &conn) {}
+        virtual void deal(const muduo::net::TcpConnectionPtr &conn, std::string &m_buffer) {}
 
         void onMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net::Buffer *buffer, muduo::Timestamp time);
         muduo::net::EventLoop *m_loop;
         ZkClient m_zkclient;
-        std::string m_buffer;
+        // std::string m_buffer;
         std::string m_ip;
         std::string m_port;
         std::string m_id;
@@ -37,7 +37,7 @@ namespace star
         map(std::string id, std::function<std::vector<std::string>(std::string)> func);
         ~map() {}
 
-        void deal(const muduo::net::TcpConnectionPtr &conn) override;
+        void deal(const muduo::net::TcpConnectionPtr &conn, std::string &m_buffer) override;
 
         inline void set_map(std::function<std::vector<std::string>(std::string)> func)
         {
@@ -67,7 +67,7 @@ namespace star
         reduce(std::string id, std::function<std::unordered_map<std::string, uint64_t>(std::string)> m_func);
         ~reduce() {}
 
-        void deal(const muduo::net::TcpConnectionPtr &conn) override;
+        void deal(const muduo::net::TcpConnectionPtr &conn, std::string &m_buffer) override;
 
         inline void set_reduce(std::function<std::unordered_map<std::string, uint64_t>(std::string)> func)
         {
