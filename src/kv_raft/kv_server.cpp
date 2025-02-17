@@ -339,8 +339,7 @@ namespace star
                         Locker::ptr mtx = std::make_shared<Locker>(&m_mtx);
                         command_queue.push(req.command());
                         index = m_log.size() + 1;
-                        std::tuple<uint64_t, uint64_t, std::string> tmp(m_term, index, req.command());
-                        m_log.push_back(tmp);
+                        log_input(m_term, index, req.command());
                     }
 
                     resp.set_success(false);
@@ -406,7 +405,6 @@ namespace star
                                     std::this_thread::sleep_for(std::chrono::milliseconds(timeout));
                                 }
                             }
-
                         }
                     }
                     else

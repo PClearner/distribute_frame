@@ -59,6 +59,10 @@ namespace star
                 {
                     auto it = nodes_record.find(leaderid);
                     it++;
+                    if (it == nodes_record.end())
+                    {
+                        it = nodes_record.begin();
+                    }
                     leaderid = it->first;
 
                     std::string ip = nodes_record[leaderid].first;
